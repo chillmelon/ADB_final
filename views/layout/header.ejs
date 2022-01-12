@@ -1,15 +1,13 @@
 <nav class="navbar navbar-light bg-light fixed-top">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">
-      <img
-        alt="Brand"
-        src="/img/search.png"
-        width="30"
-        height="24"
-        class="d-inline-block align-text-top"
-      />
-      ADB</a
-    >
+    <ul class="nav nav-tabs">
+      <li class="nav-item">
+        <a class="nav-link active home" href="/">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link graph" href="/graph">Graph</a>
+      </li>
+    </ul>
     <button
       class="navbar-toggler"
       type="button"
@@ -76,3 +74,9 @@
     </div>
   </div>
 </nav>
+<script>
+  if (location.href.indexOf("graph") != -1) {
+    $(".home").removeClass("active");
+    $(".graph").addClass("active");
+  }
+</script>

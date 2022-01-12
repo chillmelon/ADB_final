@@ -6,4 +6,8 @@ router.get('/', function (req, res, next) {
   res.render('home/index');
 });
 
+router.get('/graph', function (req, res, next) {
+  res.render('home/index');
+});
+
 module.exports = router;
