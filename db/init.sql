@@ -33,4 +33,7 @@ CREATE TABLE houses (
 
 COPY houses FROM '/data/houses.csv' csv header;
 
+ALTER TABLE houses ADD COLUMN geom geometry(point, 4326);
+UPDATE houses SET geom = ST_SetSRID(ST_MakePoint(longitude, latitude), 4326);
+
 COMMIT;
