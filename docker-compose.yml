@@ -1,0 +1,29 @@
+version: "3.8"
+services:
+  db:
+    image: postgres
+    restart: always
+    container_name: adb_final-db
+    environment:
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=root
+      - POSTGRES_DB=adb_final
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./data/houses.csv:/data/houses.csv
+      - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql
+  app:
+    build: ./app
+    container_name: adb_final-api
+    ports:
+      - "3000:3000"
+    links:
+      - db:db
+    depends_on:
+      - db
+    environment:
+      - DB_HOST=db
+      - DB_USER=root
+      - DB_PASSWORD=root
+    command: npm start
