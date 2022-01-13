@@ -14,8 +14,8 @@ services:
       - ./data/houses.csv:/data/houses.csv
       - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql
   app:
-    build: ./app
-    container_name: adb_final-api
+    build: ./src
+    container_name: adb_final-app
     ports:
       - "3000:3000"
     links:
