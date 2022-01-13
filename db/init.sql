@@ -2,7 +2,7 @@ BEGIN;
 
 CREATE SCHEMA IF NOT EXISTS adb_final;
 
-CREATE TABLE adb_final.houses (
+CREATE TABLE houses (
 	ID SERIAL PRIMARY KEY,
 	city text,
 	district text,
@@ -31,6 +31,6 @@ CREATE TABLE adb_final.houses (
 	longitude double precision
 );
 
-COPY adb_final.houses FROM '/data/houses.csv' csv header;
+COPY houses FROM '/data/houses.csv' csv header;
 
 COMMIT;
