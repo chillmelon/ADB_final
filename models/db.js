@@ -1,6 +1,6 @@
-import pg from "pg";
+const pg = require("pg");
 const { Pool } = pg;
-import dbConfig from "../config/dbConfig.js";
+const dbConfig = require("../config/db.js")
 
 const pool = new Pool({
 	host: dbConfig.host,
@@ -9,4 +9,4 @@ const pool = new Pool({
 	database: dbConfig.database,
 });
 
-export default pool;
+module.exports = pool;
