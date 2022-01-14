@@ -173,7 +173,7 @@
   var city = ['台北市', '新北市', '基隆市', '桃園市', '新竹市', '新竹縣'];
   var inner = "<option selected>請選擇縣市</option>";
   for (var i = 0; i < city.length; i++) {
-    inner += `<option value=${i}>${city[i]}</option>`;
+    inner += `<option value=${city[i]}>${city[i]}</option>`;
   }
   $("#city").html(inner);
   var noIndex;
@@ -186,7 +186,7 @@
     noIndex = index;
     var Sinner = "<option selected>請選擇區域</option>";
     for (var i = 0; i < sectors[index].length; i++) {
-      Sinner += `<option value=${i}>${sectors[index][i]}</option>`;
+      Sinner += `<option value=${sectors[index][i]}>${sectors[index][i]}</option>`;
     }
     $("#district").html(Sinner);
   })
