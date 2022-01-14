@@ -6,8 +6,15 @@ console.log("house loaded");
 module.exports = function () {
 	const router = express.Router();
 
-	router.get('/', async (req, res) => {
-		let houses = await Houses.get();
+	router.get("/test", async (req, res) => {
+		let data = req.body;
+		let houses = await Houses.test();
+		return res.status(200).json(houses);
+	})
+
+	router.post("/", async (req, res) => {
+		let data = req.body;
+		let houses = await Houses.get(data);
 		return res.json(houses);
 	})
 
