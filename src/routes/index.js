@@ -7,7 +7,7 @@ router.get('/', function (req, res, next) {
 });
 
 router.get('/graph', function (req, res, next) {
-  res.render('home/index');
+  res.render('home/graphpage');
 });
 
 module.exports = router;
