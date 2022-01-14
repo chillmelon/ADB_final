@@ -7,7 +7,7 @@ const House = {
 			return result.rows;
 		} catch (error) {
 			console.error(error);
-			throw error;
+			return undefined;
 		}
 	},
 	async get(data) {
@@ -46,7 +46,7 @@ const House = {
 			return result.rows;
 		} catch (error) {
 			console.error(error);
-			throw error;
+			return undefined;
 		}
 	},
 }
