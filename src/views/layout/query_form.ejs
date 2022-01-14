@@ -1,42 +1,27 @@
 <form>
     <div class="row g-3">
 <!-- 房型 -->
-        <div class="col-sm-3">      
-            <select class="form-select form-select-sm" aria-label=".form-select-sm example">
-                <option selected>0</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-              </select>
+        <div class="col-sm-3">
+          <input type="number" class="form-control form-control-sm" id="room">
         </div>
         <div class="col-sm-1">房</div>
         <div class="col-sm-3">
-            <select class="form-select form-select-sm" aria-label=".form-select-sm example">
-                <option selected>0</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-              </select>
+          <input type="number" class="form-control form-control-sm" id="living">
         </div>
         <div class="col-sm-1">廳</div>
         <div class="col-sm-3">
-            <select class="form-select form-select-sm" aria-label=".form-select-sm example">
-                <option selected>0</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-              </select>
+          <input type="number" class="form-control form-control-sm" id="toilet">
         </div>
         <div class="col-sm-1">衛</div>
 <!-- 地區   -->
       
         <div class="col-md-6">
-            <select class="form-select form-select-sm" aria-label=".form-select-sm example" id="list1">
+            <select class="form-select form-select-sm" aria-label=".form-select-sm example" id="city">
               </select>
         </div>
        
         <div class="col-md-6">
-            <select class="form-select form-select-sm" aria-label=".form-select-sm example" id="list2">
+            <select class="form-select form-select-sm" aria-label=".form-select-sm example" id="district">
                 <option selected>請選擇區域</option>
               </select>
         </div>
@@ -45,98 +30,75 @@
             樓型：
         </div>
         <div class="form-check col-md-3">
-          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+          <input class="form-check-input " type="checkbox" value="" id="building">
           <label class="form-check-label" for="flexCheckDefault">
             大樓
           </label>
         </div>
 
         <div class="form-check col-md-3">
-          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+          <input class="form-check-input" type="checkbox" value="" id="mansion">
           <label class="form-check-label" for="flexCheckDefault">
             華廈
           </label>
         </div>
         <div class="form-check col-md-3">
-          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+          <input class="form-check-input" type="checkbox" value="" id="apartment">
           <label class="form-check-label" for="flexCheckDefault">
             公寓
           </label>
         </div>
 
         <div class="form-check col-md-3">
-          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+          <input class="form-check-input" type="checkbox" value="" id="house">
           <label class="form-check-label" for="flexCheckDefault">
             透天
           </label>
         </div>
-        <div class="form-check col-md-2">
-          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+
+<!-- 陽台 -->
+        <div class="form-check col-md-4">
+          <input class="form-check-input" type="checkbox" value="" id="balcony_true">
           <label class="form-check-label" for="flexCheckDefault">
-            有
+            有陽台
           </label>
         </div>
 
-        <div class="form-check col-md-2">
-          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-          <label class="form-check-label" for="flexCheckDefault">
-            無 
-          </label>
-        </div>
-        <div class="col-md-2">
-          陽台
-        </div>
+  
 <!-- 屋齡 -->
           <div class="col-md-12">
             屋齡（年）：
           </div>
-          <div class="form-check col-sm-3">
-            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-            <label class="form-check-label" for="flexCheckDefault">
-              5以內
-            </label>
+          <div class="col-sm-4">
+            <input type="number" class="form-control form-control-sm" id="age_low">
           </div>
-          <div class="form-check col-sm-3">
-            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-            <label class="form-check-label" for="flexCheckDefault">
-              5~10
-            </label>
+          <div class="col-sm-1">～</div>
+          <div class="col-sm-4">
+            <input type="number" class="form-control form-control-sm" id="age_high">
           </div>
-
-          <div class="form-check col-sm-3">
-            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-            <label class="form-check-label" for="flexCheckDefault">
-              10~20
-            </label>
-          </div>
-          <div class="form-check col-sm-3">
-            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-            <label class="form-check-label" for="flexCheckDefault">
-              20以上
-            </label>
-          </div>
+          <div class="col-sm-3">年內</div>
 <!-- 價錢 -->
           <div class="col-md-12">
             價錢：
           </div>
-          <div class="form-check col-sm-4">
-            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+          <div class="form-check col-sm-6">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="single">
             <label class="form-check-label" for="flexRadioDefault1">
-              一坪
+              每平方公尺
             </label>
           </div>
-          <div class="form-check col-sm-5">
-            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+          <div class="form-check col-sm-4">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="total">
             <label class="form-check-label" for="flexRadioDefault2">
               總價
             </label>
           </div>
           <div class="col-sm-4">
-            <input type="text" class="form-control form-control-sm" id="exampleFormControlInput1">
+            <input type="number" class="form-control form-control-sm" id="price_low">
           </div>
           <div class="col-sm-1">～</div>
           <div class="col-sm-4">
-            <input type="text" class="form-control form-control-sm" id="exampleFormControlInput1">
+            <input type="number" class="form-control form-control-sm" id="price_high">
           </div>
           <div class="col-sm-3">萬元</div>
 <!-- 車位  -->
@@ -144,74 +106,57 @@
             車位：
           </div>
           <div class="form-check col-md-3">
-            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            <input class="form-check-input" type="checkbox" value="" id="parking0">
             <label class="form-check-label" for="flexCheckDefault" style="font-size: 15px;">
-              平面坡道
+              坡道平面
             </label>
           </div>
 
           <div class="form-check col-md-3">
-            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            <input class="form-check-input" type="checkbox" value="" id="parking1">
             <label class="form-check-label" for="flexCheckDefault" style="font-size: 15px;">
-              平面升降
+              坡道機械
             </label>
           </div>
           <div class="form-check col-md-3">
-            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            <input class="form-check-input" type="checkbox" value="" id="parking2">
             <label class="form-check-label" for="flexCheckDefault" style="font-size: 15px;">
-              機械坡道
-            </label>
-          </div>
-
-          <div class="form-check col-md-3">
-            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-            <label class="form-check-label" for="flexCheckDefault" style="font-size: 15px;">
-              機械升降
-            </label>
-          </div>
-          <div class="form-check col-md-3">
-            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-            <label class="form-check-label" for="flexCheckDefault" style="font-size: 15px;">
-              塔式
+              升降機械
             </label>
           </div>
 
           <div class="form-check col-md-3">
-            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            <input class="form-check-input" type="checkbox" value="" id="parking3">
             <label class="form-check-label" for="flexCheckDefault" style="font-size: 15px;">
               一樓平面
             </label>
           </div>
-<!-- 住or商 -->
-          <div class="col-md-12">
-            土地使用分區：
-        </div>
-        <div class="form-check col-md-4">
-          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-          <label class="form-check-label" for="flexCheckDefault">
-            住宅區
-          </label>
-        </div>
+          <div class="form-check col-md-3">
+            <input class="form-check-input" type="checkbox" value="" id="parking4">
+            <label class="form-check-label" for="flexCheckDefault" style="font-size: 15px;">
+              升降平面
+            </label>
+          </div>
+          <div class="form-check col-md-3">
+            <input class="form-check-input" type="checkbox" value="" id="parking5">
+            <label class="form-check-label" for="flexCheckDefault" style="font-size: 15px;">
+              塔式車位
+            </label>
+          </div>
+          <div class="form-check col-md-3">
+            <input class="form-check-input" type="checkbox" value="" id="parking6">
+            <label class="form-check-label" for="flexCheckDefault" style="font-size: 15px;">
+              其他
+            </label>
+          </div>
 
-        <div class="form-check col-md-4">
-          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-          <label class="form-check-label" for="flexCheckDefault">
-            商業區
-          </label>
-        </div>
-        <div class="form-check col-md-4">
-          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-          <label class="form-check-label" for="flexCheckDefault">
-            其他
-          </label>
-        </div>
-        <div class="col-sm-4">信仰偏好：</div>
+        <div class="col-sm-4" style="font-size: medium;">信仰偏好：</div>
         <div class="col-sm-8">
-            <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+            <select class="form-select form-select-sm" aria-label=".form-select-sm example", id="religion">
                 <option selected>請選擇神明</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
+                <option value="0">福德正神</option>
+                <option value="1">太上老君</option>
+                <option value="2">觀音菩薩</option>
               </select>
         </div>
 
@@ -223,25 +168,101 @@
   
 
   <script>
- // 產出第一層
-    var city=['北','中','南'];
+// 縣市選擇生成
+    var city=['台北市','新北市','基隆市','桃園市','新竹市','新竹縣'];
     var inner="<option selected>請選擇縣市</option>";
     for(var i=0;i<city.length;i++){
         inner+=`<option value=${i}>${city[i]}</option>`;
     }
-    $("#list1").html(inner);//寫入
-    var noIndex;//第二層的index
-    //選擇第一層後，產出第二層
+    $("#city").html(inner);
+    var noIndex;
     var sectors=new Array();
-    sectors[1]=['台北','桃園' ,'新竹' ];
-    sectors[2]=['台中','彰化',' 苗栗 '];  
-    sectors[3]=['高雄 ','屏東',' 台南 ']; 
-    $("#list1").change(function(){
-        index=this.selectedIndex;//第一層的index
+    sectors[1]=['文山區','大安區','信義區' ];
+    sectors[2]=['淡水區','八里區','板橋區'];  
+    sectors[3]=['暖暖區','七堵區']; 
+    $("#city").change(function(){
+        index=this.selectedIndex;
         noIndex =index;
         var Sinner="<option selected>請選擇區域</option>";
         for(var i=0;i<sectors[index].length;i++){
         Sinner+=`<option value=${i}>${sectors[index][i]}</option>`;
         }
-        $("#list2").html(Sinner);})
+        $("#district").html(Sinner);})
+
+// post query 
+    $(document).ready(function(){
+        $("form").submit(function(){
+          let object_type_tf = [$('#building').is(':checked'),$('#mansion').is(':checked')
+          ,$('#apartment').is(':checked'),$('#house').is(':checked')]
+          var object_type = []
+          for (i=0; i<object_type_tf.length ;i++) {
+            if (object_type_tf[i] == true) {
+              object_type.push(i)
+            }
+          }
+          let parking_type_tf = [$('#parking0').is(':checked'),$('#parking1').is(':checked')
+          ,$('#parking2').is(':checked'),$('#parking3').is(':checked'),$('#parking4').is(':checked')
+          ,$('#parking5').is(':checked'),$('#parking6').is(':checked')]
+          var parking_type = []
+          for (i=0; i<parking_type_tf.length ;i++) {
+            if (parking_type_tf[i] == true) {
+              parking_type.push(i)
+            }
+          }
+          var price_sqm_lower = null
+          var price_sqm_upper = null
+          var price_total_lower = null
+          var price_total_upper = null
+
+        if ($('#single').is(':checked')){
+          price_sqm_lower = $('#price_low').val()
+          price_sqm_upper = $('#price_high').val()
+        } else if ($('#total').is(':checked')){
+          price_total_lower = $('#price_low').val()
+          price_total_upper = $('#price_high').val()
+        }
+        
+
+        let data ={
+        'house_type': {
+          "bed_room" : $('#room').val(),
+          "living_room" :$('#living').val(),
+          "toilet" :$('toilet').val()
+        },
+        'area' : {
+          'city': $('#city').find(":selected").val(),
+          'district': $('#district').find(":selected").val()
+        },
+        "object_type" : object_type,
+        "balcony" : $('#balcony_true').is(':checked'),
+        'age': {
+          'lower' :$('#age_low').val(),
+          'upper' :$('#age_high').val()
+        },
+        "price" : {
+          'price_sqm_lower' : price_sqm_lower,
+          'price_sqm_upper' : price_sqm_upper,
+          'price_total_lower' : price_total_lower,
+          'price_total_upper' : price_total_upper
+        },
+        'parking_type' : parking_type,
+        'religion' : $('#religion').val()
+      }
+          alert(data.religion)
+        });
+      });        
+
+
+    
+      // //POST請求
+      // axios({
+      //     method: 'post',
+      //     url: '/api/house',
+      //     //API要求的資料
+      //     data: data
+      // })
+      // .then( (response) => console.log(response))
+
+ 
+    
     </script>
