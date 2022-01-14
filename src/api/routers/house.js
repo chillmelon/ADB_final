@@ -13,6 +13,7 @@ module.exports = function () {
 	})
 
 	router.post("/", async (req, res) => {
+		console.log("request", req.body);
 		let data = req.body;
 		let houses = await Houses.get(data);
 		return res.json(houses);
