@@ -253,6 +253,14 @@
       price_total_lower = 10000 * parseInt($('#price_low').val());
       price_total_upper = 10000 * parseInt($('#price_high').val());
     }
+    if (city==null){
+      alert('請選擇縣市')
+      return
+    }else if(district==null){
+      alert('請選擇區域')
+      return
+    }
+    
 
     let data = {
       "bed_room": bed_room,
