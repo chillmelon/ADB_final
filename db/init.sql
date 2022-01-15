@@ -46,3 +46,6 @@ UPDATE houses SET geog = ST_SetSRID(ST_MakePoint(longitude, latitude), 4326);
 
 ALTER TABLE temples ADD COLUMN geog geography(point, 4326);
 UPDATE temples SET geog = ST_SetSRID(ST_MakePoint(longitude, latitude), 4326);
+
+CREATE INDEX house_geography_index ON houses USING GIST (geog);
+CREATE INDEX temple_geography_index ON temples USING GIST (geog);
