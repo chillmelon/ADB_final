@@ -24,7 +24,6 @@ module.exports = function () {
 	})
 
 	router.post("/", async (req, res) => {
-		console.log("request:", req.body);
 		let building_type = [0, 1, 2, 3, 4, 5, 6, 7];
 		let parking_type = [0, 1, 2, 3, 4, 5, 6, 7, 8];
 		let data = req.body;
@@ -44,7 +43,6 @@ module.exports = function () {
 		} else {
 			houses = await House.get(data);
 		}
-
 
 		if (!houses) {
 			return res.status(500).send("something went wrong.");
