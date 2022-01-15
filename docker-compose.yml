@@ -27,4 +27,5 @@ services:
       - DB_HOST=db
       - DB_USER=root
       - DB_PASSWORD=root
+      - DB_DATABASE=adb_final
     command: npm start
