@@ -1,6 +1,6 @@
 const db = require("./neo4j.js");
 
-const House = {
+const Territory = {
 	async test() {
 		var session = db.session()
 		
