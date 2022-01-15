@@ -1,5 +1,6 @@
 const express = require("express");
 const House = require("../../models/houses");
+const Temple = require("../../models/temples");
 
 console.log("house loaded");
 
@@ -36,7 +37,14 @@ module.exports = function () {
 			data.parking_type = parking_type;
 		}
 
-		let houses = await House.get(data);
+		let houses = []
+
+		if (data.god) {
+			houses = await House.get_by_god(data);
+		} else {
+			houses = await House.get(data);
+		}
+
 
 		if (!houses) {
 			return res.status(500).send("something went wrong.");
