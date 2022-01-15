@@ -41,8 +41,8 @@ CREATE TABLE temples (
 COPY houses FROM '/data/houses.csv' DELIMITER ',' CSV HEADER;
 COPY temples FROM '/data/temples.csv' DELIMITER ',' CSV HEADER;
 
-ALTER TABLE houses ADD COLUMN geom geometry(point, 4326);
-UPDATE houses SET geom = ST_SetSRID(ST_MakePoint(longitude, latitude), 4326);
+ALTER TABLE houses ADD COLUMN geog geography(point, 4326);
+UPDATE houses SET geog = ST_SetSRID(ST_MakePoint(longitude, latitude), 4326);
 
-ALTER TABLE temples ADD COLUMN geom geometry(point, 4326);
-UPDATE temples SET geom = ST_SetSRID(ST_MakePoint(longitude, latitude), 4326);
+ALTER TABLE temples ADD COLUMN geog geography(point, 4326);
+UPDATE temples SET geog = ST_SetSRID(ST_MakePoint(longitude, latitude), 4326);
