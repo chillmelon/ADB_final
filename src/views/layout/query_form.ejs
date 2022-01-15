@@ -153,10 +153,6 @@
     <div class="col-sm-4" style="font-size: medium;">信仰偏好：</div>
     <div class="col-sm-8">
       <select class="form-select form-select-sm" aria-label=".form-select-sm example", id="religion">
-        <option selected>請選擇神明</option>
-        <option value="0">福德正神</option>
-        <option value="1">太上老君</option>
-        <option value="2">觀音菩薩</option>
       </select>
     </div>
 
@@ -170,7 +166,7 @@
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script>
   // 縣市選擇生成
-  var city = ['台北市', '新北市', '基隆市', '桃園市', '新竹市', '新竹縣'];
+  var city = ['臺北市', '新北市', '基隆市', '桃園市', '新竹市', '新竹縣'];
   var inner = "<option selected>請選擇縣市</option>";
   for (var i = 0; i < city.length; i++) {
     inner += `<option value=${city[i]}>${city[i]}</option>`;
@@ -178,9 +174,17 @@
   $("#city").html(inner);
   var noIndex;
   var sectors = new Array();
-  sectors[1] = ['文山區', '大安區', '信義區'];
-  sectors[2] = ['淡水區', '八里區', '板橋區'];
-  sectors[3] = ['暖暖區', '七堵區'];
+  sectors[1] = ['文山區', '中正區', '大同區', '萬華區', '內湖區', '中山區', '信義區', '松山區', '北投區',
+                '士林區', '大安區', '南港區', ];
+  sectors[2] = ['板橋區', '土城區','新莊區', '五股區', '林口區', '泰山區', '新店區', '深坑區', '萬里區', '金山區', '汐止區',
+                '淡水區', '八里區', '瑞芳區', '三重區', '蘆洲區', '中和區', '永和區', '三峽區', '樹林區',
+                '三芝區', '鶯歌區', '貢寮區', '雙溪區', '石門區'];
+  sectors[3] = ['仁愛區', '安樂區', '暖暖區', '七堵區'];
+  sectors[4] = ['桃園區', '中壢區', '觀音區', '龍潭區',
+                '大溪區', '新屋區', '楊梅區', '蘆竹區', '大園區', '八德區', '平鎮區', '龜山區','復興區'];
+  sectors[5] = ['新竹市'];
+  sectors[6] = ['竹北市', '新埔鎮', '芎林鄉', '竹東鎮', '湖口鄉', '新豐鄉', '關西鎮', '峨眉鄉', '尖石鄉',
+                '寶山鄉', '橫山鄉', '北埔鄉'];
   $("#city").change(function () {
     index = this.selectedIndex;
     console.log(index)
@@ -191,6 +195,17 @@
     }
     $("#district").html(Sinner);
   })
+
+  var god= ['福德正神', '釋迦牟尼佛', '普庵祖師', '天上聖母', '關聖帝君', '玄天上帝', '瑤池金母', '三官大帝', '玉皇大帝',
+       '開漳聖王', '明明上帝', '孚佑帝君', '五府千歲', '三府王爺', '阿彌陀佛', '神農大帝', '三山國王', '清水祖師',
+       '保儀尊王', '燃燈佛', '保生大帝', '廣澤尊王', '彌勒佛', '地藏王菩薩', '濟公活佛', '中壇元帥', '大眾爺',
+       '有應公', '九天玄女', '顯應祖師'];
+  var ginner = "<option selected>請選擇神明</option>";
+  for (var i = 0; i < god.length; i++) {
+    ginner += `<option value=${god[i]}>${god[i]}</option>`;
+  }
+  $("#religion").html(ginner);
+
 
   // post query
   var markerList = []
