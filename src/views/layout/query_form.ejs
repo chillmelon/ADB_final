@@ -25,6 +25,14 @@
         <option selected>請選擇區域</option>
       </select>
     </div>
+
+    <!-- 神明 -->
+    <div class="col-sm-4" style="font-size: medium;">信仰偏好：</div>
+    <div class="col-sm-8">
+      <select class="form-select form-select-sm" aria-label=".form-select-sm example", id="religion">
+      </select>
+    </div>
+
     <!-- 樓型 -->
     <div class="col-md-12">
       樓型：
@@ -150,11 +158,6 @@
       </label>
     </div>
 
-    <div class="col-sm-4" style="font-size: medium;">信仰偏好：</div>
-    <div class="col-sm-8">
-      <select class="form-select form-select-sm" aria-label=".form-select-sm example", id="religion">
-      </select>
-    </div>
 
     <div class="col-12">
       <button type="submit" id="search_button" class="btn btn-primary">Submit</button>
@@ -200,7 +203,7 @@
        '開漳聖王', '明明上帝', '孚佑帝君', '五府千歲', '三府王爺', '阿彌陀佛', '神農大帝', '三山國王', '清水祖師',
        '保儀尊王', '燃燈佛', '保生大帝', '廣澤尊王', '彌勒佛', '地藏王菩薩', '濟公活佛', '中壇元帥', '大眾爺',
        '有應公', '九天玄女', '顯應祖師'];
-  var ginner = "<option selected>請選擇神明</option>";
+  var ginner = "<option value=''>請選擇神明</option>";
   for (var i = 0; i < god.length; i++) {
     ginner += `<option value=${god[i]}>${god[i]}</option>`;
   }
@@ -218,6 +221,7 @@
     markerList = []
 
 
+    var god = $('#religion').val() == '' ? null : $('#religion').val()
     var bed_room = $('#room').val()=='' ? null : $('#room').val()
     var living_room = $('#living').val()=='' ?  null : $('#living').val()
     var toilet = $('#toilet').val()=='' ? null : $('#toilet').val()
@@ -268,12 +272,15 @@
       price_total_lower = 10000 * parseInt($('#price_low').val());
       price_total_upper = 10000 * parseInt($('#price_high').val());
     }
-    if (city==null){
-      alert('請選擇縣市')
-      return
-    }else if(district==null){
-      alert('請選擇區域')
-      return
+
+    if (god == null) {
+      if (city==null){
+        alert('請選擇縣市')
+        return
+      }else if(district==null){
+        alert('請選擇區域')
+        return
+      }
     }
     
 
@@ -292,8 +299,10 @@
       'price_total_lower': price_total_lower,
       'price_total_upper': price_total_upper,
       'parking_type': parking_type.length==0? null :parking_type,
-      //'religion' : $('#religion').val()
+      'god' : god
     };
+
+
     axios.post(
       "/api/house",
       data
