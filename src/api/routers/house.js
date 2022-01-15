@@ -23,8 +23,19 @@ module.exports = function () {
 	})
 
 	router.post("/", async (req, res) => {
-		console.log("request", req.body);
+		console.log("request:", req.body);
+		let building_type = [0, 1, 2, 3, 4, 5, 6, 7];
+		let parking_type = [0, 1, 2, 3, 4, 5, 6, 7, 8];
 		let data = req.body;
+
+		if (data.building_type == null) {
+			data.building_type = building_type;
+		}
+
+		if (data.parking_type == null) {
+			data.parking_type = parking_type;
+		}
+
 		let houses = await Houses.get(data);
 
 		if (!houses) {

@@ -13,20 +13,24 @@ const House = {
 	async get(data) {
 		try {
 			let sql = "SELECT * FROM houses WHERE"
-				+ " " + "($1::int is null OR bed_room = $1)"      + "AND"
-				+ " " + "($2::int is null OR living_room = $2)"   + "AND"
-				+ " " + "($3::int is null OR toilet = $3)"        + "AND"
-				+ " " + "($4::int is null OR building_type = $4)" + "AND"
-				+ " " + "($5::int is null OR age > $5)"           + "AND"
-				+ " " + "($6::int is null OR age < $6)"           + "AND"
-				+ " " + "($7::bool is null OR balcony = $7)"      + "AND"
-				+ " " + "($8::int is null OR price_sqm > $8)"     + "AND"
-				+ " " + "($9::int is null OR price_sqm < $9)"     + "AND"
-				+ " " + "($10::int is null OR price_total > $10)" + "AND"
-				+ " " + "($11::int is null OR price_total < $11)" + "AND"
-				+ " " + "($12::int is null OR parking_type = $12);"
+				+ "($1::text is null OR city = $1)"
+				+ "AND" + "($2::text is null OR district = $2)"
+				+ "AND" + "($3::int is null OR bed_room = $3)"
+				+ "AND" + "($4::int is null OR living_room = $4)"
+				+ "AND" + "($5::int is null OR toilet = $5)"
+				+ "AND" + "(building_type = ANY($6))"
+				+ "AND" + "($7::int is null OR age > $7)"
+				+ "AND" + "($8::int is null OR age < $8)"
+				+ "AND" + "($9::bool is null OR balcony = $9)"
+				+ "AND" + "($10::int is null OR price_sqm > $10)"
+				+ "AND" + "($11::int is null OR price_sqm < $11)"
+				+ "AND" + "($12::int is null OR price_total > $12)"
+				+ "AND" + "($13::int is null OR price_total < $13)"
+				+ "AND" + "(parking_type = ANY($14));"
 
 			let values = [
+				data.city,
+				data.district,
 				data.bed_room,
 				data.living_room,
 				data.toilet,
