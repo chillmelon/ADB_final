@@ -242,11 +242,11 @@
     var price_total_upper = null;
 
     if ($('#single').is(':checked')) {
-      price_sqm_lower = $('#price_low').val();
-      price_sqm_upper = $('#price_high').val();
+      price_sqm_lower = 10000 * parseInt($('#price_low').val());
+      price_sqm_upper = 10000 * parseInt($('#price_high').val());
     } else if ($('#total').is(':checked')) {
-      price_total_lower = $('#price_low').val();
-      price_total_upper = $('#price_high').val();
+      price_total_lower = 10000 * parseInt($('#price_low').val());
+      price_total_upper = 10000 * parseInt($('#price_high').val());
     }
 
     let data = {
