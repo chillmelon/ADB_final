@@ -36,7 +36,7 @@ module.exports = function () {
 			data.parking_type = parking_type;
 		}
 
-		let houses = []
+		let houses = [];
 
 		if (data.god) {
 			houses = await House.get_by_god(data);

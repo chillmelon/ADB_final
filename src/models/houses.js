@@ -26,7 +26,7 @@ const House = {
 				+ "AND" + "($11::int is null OR price_sqm < $11)"
 				+ "AND" + "($12::int is null OR price_total > $12)"
 				+ "AND" + "($13::int is null OR price_total < $13)"
-				+ "AND" + "(parking_type = ANY($14));"
+				+ "AND" + "(parking_type = ANY($14));";
 
 			let values = [
 				data.city,
