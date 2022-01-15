@@ -1,7 +1,3 @@
-BEGIN;
-
-CREATE SCHEMA IF NOT EXISTS adb_final;
-
 CREATE TABLE houses (
 	ID SERIAL PRIMARY KEY,
 	city text,
@@ -29,6 +25,5 @@ CREATE TABLE houses (
 COPY houses FROM '/data/houses.csv' csv header;
 
 ALTER TABLE houses ADD COLUMN geom geometry(point, 4326);
-UPDATE houses SET geom = ST_SetSRID(ST_MakePoint(longitude, latitude), 4326);
 
-COMMIT;
+UPDATE houses SET geom = ST_SetSRID(ST_MakePoint(longitude, latitude), 4326);
