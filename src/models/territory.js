@@ -29,12 +29,7 @@ const House = {
 			,{'god_name': godName, 'districtList': districtList})
 			.then(function(result){
 				outf = (JSON.stringify(result.records))
-      			fs.writeFile('user.json', outf, (err) => {
-      				if (err) {
-            			throw err;
-        			}
-				console.log("JSON data is saved.");
-				})
+      			return outf
 			})
 			.catch(function(err){
 					console.log(err)
