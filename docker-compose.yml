@@ -11,6 +11,7 @@ services:
     ports:
       - "5432:5432"
     volumes:
+      - ./data/temples.csv:/data/temples.csv
       - ./data/houses.csv:/data/houses.csv
       - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql
   app:

@@ -1,5 +1,5 @@
 const express = require("express");
-const Houses = require("../../models/houses");
+const House = require("../../models/houses");
 
 console.log("house loaded");
 
@@ -9,7 +9,7 @@ module.exports = function () {
 
 	router.get("/test", async (req, res) => {
 		let data = req.body;
-		let houses = await Houses.test();
+		let houses = await House.test();
 
 		if (!houses) {
 			return res.status(500).send("something went wrong.");
@@ -36,7 +36,7 @@ module.exports = function () {
 			data.parking_type = parking_type;
 		}
 
-		let houses = await Houses.get(data);
+		let houses = await House.get(data);
 
 		if (!houses) {
 			return res.status(500).send("something went wrong.");

@@ -22,8 +22,27 @@ CREATE TABLE houses (
 	longitude double precision
 );
 
-COPY houses FROM '/data/houses.csv' csv header;
+CREATE TABLE temples (
+	ID SERIAL PRIMARY KEY,
+	name text,
+	god_0 text,
+	god_1 text,
+	god_2 text,
+	city text,
+	addr text,
+	religion text,
+	tel text,
+	pricipal text,
+	longitude double precision,
+	latitude double precision,
+	dist text
+);
+
+COPY houses FROM '/data/houses.csv' DELIMITER ',' CSV HEADER;
+COPY temples FROM '/data/temples.csv' DELIMITER ',' CSV HEADER;
 
 ALTER TABLE houses ADD COLUMN geom geometry(point, 4326);
-
 UPDATE houses SET geom = ST_SetSRID(ST_MakePoint(longitude, latitude), 4326);
+
+ALTER TABLE temples ADD COLUMN geom geometry(point, 4326);
+UPDATE temples SET geom = ST_SetSRID(ST_MakePoint(longitude, latitude), 4326);
