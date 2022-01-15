@@ -13,6 +13,29 @@ services:
     volumes:
       - ./data/houses.csv:/data/houses.csv
       - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql
+  db2:
+    image: neo4j:4.0.3
+    restart: always
+    hostname: neo4j
+    container_name: neo4j
+    ports:
+      - "7474:7474"
+      - "7687:7687"
+    volumes:
+      - ./data/house.csv:/var/lib/neo4j/import/house.csv
+      - ./data/gods.csv:/var/lib/neo4j/import/gods.csv
+      - ./data/temple.csv:/var/lib/neo4j/import/temple.csv
+      - ./data/close1.csv:/var/lib/neo4j/import/close1.csv
+      - ./data/close2.csv:/var/lib/neo4j/import/close2.csv
+      - ./data/close3.csv:/var/lib/neo4j/import/close3.csv
+    environment:
+      - NEO4J_AUTH=neo4j/1234
+      - NEO4J_dbms_memory_pagecache_size=1G
+      - NEO4J_dbms.memory.heap.initial_size=1G
+      - NEO4J_dbms_memory_heap_max__size=1G
+      - NEO4JLABS_PLUGINS='["apoc"]'  
+      - NEO4J_dbms_directories_import="/"
+      
   app:
     build: ./src
     container_name: adb_final-app
