@@ -183,6 +183,7 @@
   sectors[3] = ['暖暖區', '七堵區'];
   $("#city").change(function () {
     index = this.selectedIndex;
+    console.log(index)
     noIndex = index;
     var Sinner = "<option selected>請選擇區域</option>";
     for (var i = 0; i < sectors[index].length; i++) {
@@ -192,10 +193,14 @@
   })
 
   // post query
+  var markerList = []
   $("form").submit(function () {
 		event.preventDefault();
 		event.stopPropagation();
-    console.log("yoyoyo");
+    markerList.forEach(item=>{
+      map.removeLayer(item)
+    })
+    markerList = []
 
 
     var bed_room = $('#room').val()=='' ? null : $('#room').val()
@@ -266,12 +271,18 @@
       'parking_type': parking_type.length==0? null :parking_type,
       //'religion' : $('#religion').val()
     };
-
     axios.post(
       "/api/house",
       data
     ).then((result) => {
-      console.log(result.data);
+
+      result.data.forEach(item=>{
+        var marker = L.marker([item.latitude, item.longitude])
+          .addTo(map)
+          .bindPopup(`地址:${item.district}${item.address}<br>屋齡:${item.age}年<br>面積:${item.building_area.toFixed(2)}平方公尺<br>總價:${item.price_total}元`)
+          .openPopup();
+        markerList.push(marker)
+      })
     });
   });
 
