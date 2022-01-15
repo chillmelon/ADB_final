@@ -1,0 +1,312 @@
+<form>
+    <div class="row g-3">
+      <!-- 房型 -->
+      <div class="col-sm-3">
+        <input type="number" class="form-control form-control-sm" id="room">
+      </div>
+      <div class="col-sm-1">房</div>
+      <div class="col-sm-3">
+        <input type="number" class="form-control form-control-sm" id="living">
+      </div>
+      <div class="col-sm-1">廳</div>
+      <div class="col-sm-3">
+        <input type="number" class="form-control form-control-sm" id="toilet">
+      </div>
+      <div class="col-sm-1">衛</div>
+      <!-- 地區   -->
+  
+      <div class="col-md-6">
+        <select class="form-select form-select-sm" aria-label=".form-select-sm example" id="city">
+        </select>
+      </div>
+  
+      <div class="col-md-6">
+        <select class="form-select form-select-sm" aria-label=".form-select-sm example" id="district">
+          <option selected>請選擇區域</option>
+        </select>
+      </div>
+      <!-- 樓型 -->
+      <div class="col-md-12">
+        樓型：
+      </div>
+      <div class="form-check col-md-3">
+        <input class="form-check-input " type="checkbox" value="" id="building">
+        <label class="form-check-label" for="flexCheckDefault">
+          大樓
+        </label>
+      </div>
+  
+      <div class="form-check col-md-3">
+        <input class="form-check-input" type="checkbox" value="" id="mansion">
+        <label class="form-check-label" for="flexCheckDefault">
+          華廈
+        </label>
+      </div>
+      <div class="form-check col-md-3">
+        <input class="form-check-input" type="checkbox" value="" id="apartment">
+        <label class="form-check-label" for="flexCheckDefault">
+          公寓
+        </label>
+      </div>
+  
+      <div class="form-check col-md-3">
+        <input class="form-check-input" type="checkbox" value="" id="house">
+        <label class="form-check-label" for="flexCheckDefault">
+          透天
+        </label>
+      </div>
+  
+      <!-- 陽台 -->
+      <div class="form-check col-md-4">
+        <input class="form-check-input" type="checkbox" value="" id="balcony_true">
+        <label class="form-check-label" for="flexCheckDefault">
+          有陽台
+        </label>
+      </div>
+  
+  
+      <!-- 屋齡 -->
+      <div class="col-md-12">
+        屋齡（年）：
+      </div>
+      <div class="col-sm-4">
+        <input type="number" class="form-control form-control-sm" id="age_low">
+      </div>
+      <div class="col-sm-1">～</div>
+      <div class="col-sm-4">
+        <input type="number" class="form-control form-control-sm" id="age_high">
+      </div>
+      <div class="col-sm-3">年內</div>
+      <!-- 價錢 -->
+      <div class="col-md-12">
+        價錢：
+      </div>
+      <div class="form-check col-sm-6">
+        <input class="form-check-input" type="radio" name="flexRadioDefault" id="single">
+        <label class="form-check-label" for="flexRadioDefault1">
+          每平方公尺
+        </label>
+      </div>
+      <div class="form-check col-sm-4">
+        <input class="form-check-input" type="radio" name="flexRadioDefault" id="total">
+        <label class="form-check-label" for="flexRadioDefault2">
+          總價
+        </label>
+      </div>
+      <div class="col-sm-4">
+        <input type="number" class="form-control form-control-sm" id="price_low">
+      </div>
+      <div class="col-sm-1">～</div>
+      <div class="col-sm-4">
+        <input type="number" class="form-control form-control-sm" id="price_high">
+      </div>
+      <div class="col-sm-3">萬元</div>
+      <!-- 車位  -->
+      <div class="col-md-12">
+        車位：
+      </div>
+      <div class="form-check col-md-3">
+        <input class="form-check-input" type="checkbox" value="" id="parking0">
+        <label class="form-check-label" for="flexCheckDefault" style="font-size: 15px;">
+          坡道平面
+        </label>
+      </div>
+  
+      <div class="form-check col-md-3">
+        <input class="form-check-input" type="checkbox" value="" id="parking1">
+        <label class="form-check-label" for="flexCheckDefault" style="font-size: 15px;">
+          坡道機械
+        </label>
+      </div>
+      <div class="form-check col-md-3">
+        <input class="form-check-input" type="checkbox" value="" id="parking2">
+        <label class="form-check-label" for="flexCheckDefault" style="font-size: 15px;">
+          升降機械
+        </label>
+      </div>
+  
+      <div class="form-check col-md-3">
+        <input class="form-check-input" type="checkbox" value="" id="parking3">
+        <label class="form-check-label" for="flexCheckDefault" style="font-size: 15px;">
+          一樓平面
+        </label>
+      </div>
+      <div class="form-check col-md-3">
+        <input class="form-check-input" type="checkbox" value="" id="parking4">
+        <label class="form-check-label" for="flexCheckDefault" style="font-size: 15px;">
+          升降平面
+        </label>
+      </div>
+      <div class="form-check col-md-3">
+        <input class="form-check-input" type="checkbox" value="" id="parking5">
+        <label class="form-check-label" for="flexCheckDefault" style="font-size: 15px;">
+          塔式車位
+        </label>
+      </div>
+      <div class="form-check col-md-3">
+        <input class="form-check-input" type="checkbox" value="" id="parking6">
+        <label class="form-check-label" for="flexCheckDefault" style="font-size: 15px;">
+          其他
+        </label>
+      </div>
+  
+      <div class="col-sm-4" style="font-size: medium;">信仰偏好：</div>
+      <div class="col-sm-8">
+        <select class="form-select form-select-sm" aria-label=".form-select-sm example", id="religion">
+        </select>
+      </div>
+  
+      <div class="col-12">
+        <button type="submit" id="search_button" class="btn btn-primary">Submit</button>
+      </div>
+    </div>
+  </form>
+  
+  
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script>
+    // 縣市選擇生成
+    var city = ['臺北市', '新北市', '基隆市', '桃園市', '新竹市', '新竹縣'];
+    var inner = "<option selected>請選擇縣市</option>";
+    for (var i = 0; i < city.length; i++) {
+      inner += `<option value=${city[i]}>${city[i]}</option>`;
+    }
+    $("#city").html(inner);
+    var noIndex;
+    var sectors = new Array();
+    sectors[1] = ['文山區', '中正區', '大同區', '萬華區', '內湖區', '中山區', '信義區', '松山區', '北投區',
+                  '士林區', '大安區', '南港區', ];
+    sectors[2] = ['板橋區', '土城區','新莊區', '五股區', '林口區', '泰山區', '新店區', '深坑區', '萬里區', '金山區', '汐止區',
+                  '淡水區', '八里區', '瑞芳區', '三重區', '蘆洲區', '中和區', '永和區', '三峽區', '樹林區',
+                  '三芝區', '鶯歌區', '貢寮區', '雙溪區', '石門區'];
+    sectors[3] = ['仁愛區', '安樂區', '暖暖區', '七堵區'];
+    sectors[4] = ['桃園區', '中壢區', '觀音區', '龍潭區',
+                  '大溪區', '新屋區', '楊梅區', '蘆竹區', '大園區', '八德區', '平鎮區', '龜山區','復興區'];
+    sectors[5] = ['新竹市'];
+    sectors[6] = ['竹北市', '新埔鎮', '芎林鄉', '竹東鎮', '湖口鄉', '新豐鄉', '關西鎮', '峨眉鄉', '尖石鄉',
+                  '寶山鄉', '橫山鄉', '北埔鄉'];
+    $("#city").change(function () {
+      index = this.selectedIndex;
+      console.log(index)
+      noIndex = index;
+      var Sinner = "<option selected>請選擇區域</option>";
+      for (var i = 0; i < sectors[index].length; i++) {
+        Sinner += `<option value=${sectors[index][i]}>${sectors[index][i]}</option>`;
+      }
+      $("#district").html(Sinner);
+    })
+  
+    var god= ['福德正神', '釋迦牟尼佛', '普庵祖師', '天上聖母', '關聖帝君', '玄天上帝', '瑤池金母', '三官大帝', '玉皇大帝',
+         '開漳聖王', '明明上帝', '孚佑帝君', '五府千歲', '三府王爺', '阿彌陀佛', '神農大帝', '三山國王', '清水祖師',
+         '保儀尊王', '燃燈佛', '保生大帝', '廣澤尊王', '彌勒佛', '地藏王菩薩', '濟公活佛', '中壇元帥', '大眾爺',
+         '有應公', '九天玄女', '顯應祖師'];
+    var ginner = "<option selected>請選擇神明</option>";
+    for (var i = 0; i < god.length; i++) {
+      ginner += `<option value=${god[i]}>${god[i]}</option>`;
+    }
+    $("#religion").html(ginner);
+  
+  
+    // post query
+    var markerList = []
+    $("form").submit(function () {
+          event.preventDefault();
+          event.stopPropagation();
+      markerList.forEach(item=>{
+        map.removeLayer(item)
+      })
+      markerList = []
+  
+  
+      var bed_room = $('#room').val()=='' ? null : $('#room').val()
+      var living_room = $('#living').val()=='' ?  null : $('#living').val()
+      var toilet = $('#toilet').val()=='' ? null : $('#toilet').val()
+      var city = $('#city').find(":selected").val()=='請選擇縣市' ? null : $('#city').find(":selected").val()
+      var district = $('#district').find(":selected").val()=='請選擇區域' ? null : $('#district').find(":selected").val()
+      var age_low = $('#age_low').val()=='' ? null : $('#age_low').val()
+      var age_high = $('#age_high').val()=='' ? null : $('#age_high').val()
+  
+      let object_type_tf = [
+        $('#building').is(':checked'),
+        $('#mansion').is(':checked'),
+        $('#apartment').is(':checked'),
+        $('#house').is(':checked')
+      ];
+      var object_type = [];
+      for (i = 0; i < object_type_tf.length; i++) {
+        if (object_type_tf[i] == true) {
+          object_type.push(i)
+        }
+      }
+      object_type = object_type.length==0 ? null :object_type
+  
+      let parking_type_tf = [
+        $('#parking0').is(':checked'),
+        $('#parking1').is(':checked'),
+        $('#parking2').is(':checked'),
+        $('#parking3').is(':checked'),
+        $('#parking4').is(':checked'),
+        $('#parking5').is(':checked'),
+        $('#parking6').is(':checked')
+      ];
+      var parking_type = [];
+      for (i = 0; i < parking_type_tf.length; i++) {
+        if (parking_type_tf[i] == true) {
+          parking_type.push(i)
+        }
+      }
+  
+      var price_sqm_lower = null;
+      var price_sqm_upper = null;
+      var price_total_lower = null;
+      var price_total_upper = null;
+  
+      if ($('#single').is(':checked')) {
+        price_sqm_lower = 10000 * parseInt($('#price_low').val());
+        price_sqm_upper = 10000 * parseInt($('#price_high').val());
+      } else if ($('#total').is(':checked')) {
+        price_total_lower = 10000 * parseInt($('#price_low').val());
+        price_total_upper = 10000 * parseInt($('#price_high').val());
+      }
+      if (city==null){
+        alert('請選擇縣市')
+        return
+      }else if(district==null){
+        alert('請選擇區域')
+        return
+      }
+      
+  
+      let data = {
+        "bed_room": bed_room,
+        "living_room": living_room,
+        "toilet": toilet,
+        'city': city,
+        'district': district,
+        "building_type": object_type,
+        "balcony": $('#balcony_true').is(':checked')? true : null,
+        'age_lower': age_low,
+        'age_upper': age_high,
+        'price_sqm_lower': price_sqm_lower,
+        'price_sqm_upper': price_sqm_upper,
+        'price_total_lower': price_total_lower,
+        'price_total_upper': price_total_upper,
+        'parking_type': parking_type.length==0? null :parking_type,
+        //'religion' : $('#religion').val()
+      };
+      axios.post(
+        "/api/house",
+        data
+      ).then((result) => {
+  
+        result.data.forEach(item=>{
+          var marker = L.marker([item.latitude, item.longitude])
+            .addTo(map)
+            .bindPopup(`地址:${item.district}${item.address}<br>屋齡:${item.age}年<br>面積:${item.building_area.toFixed(2)}平方公尺<br>總價:${item.price_total}元`)
+            .openPopup();
+          markerList.push(marker)
+        })
+      });
+    });
+  </script>
+  
