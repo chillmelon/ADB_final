@@ -1,0 +1,14 @@
+{
+  "name": "@sandravizmad/force-directed-layout",
+  "main": "630e2747ce200005@384.js",
+  "version": "384.0.0",
+  "homepage": "https://observablehq.com/@sandravizmad/force-directed-layout",
+  "author": {
+    "name": "Sandra Becker",
+    "url": "https://observablehq.com/@sandravizmad"
+  },
+  "type": "module",
+  "peerDependencies": {
+    "@observablehq/runtime": "4"
+  }
+}
