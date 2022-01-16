@@ -95,9 +95,16 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items:
-                  $ref: "#/components/schemas/House"
+                type: object
+                properties:
+                  houses:
+                    type: array
+                    items:
+                      $ref: "#/components/schemas/House"
+                  temples:
+                    type: array
+                    items:
+                      $ref: "#/components/schemas/Temple"
         "404":
           description: No house of preferences found.
         "500":
@@ -191,6 +198,47 @@ components:
           description: "area of parking"
           type: number
           format: double
+        longitude:
+          description: "longitude of the building's coordinate"
+          type: number
+          format: double
+        latitude:
+          description: "latitude of the building's coordinate"
+          type: number
+          format: double
+    Temple:
+      type: object
+      properties:
+        id:
+          type: integer
+          example: 1
+        name:
+          type: string
+          example: "福德宮"
+        god_0:
+          type: string
+          example: "福德正神"
+        god_1:
+          type: string
+          example: "天上聖母"
+        god_2:
+          type: string
+          example: "開漳聖王"
+        city:
+          type: string
+          example: "臺北市"
+        dist:
+          type: string
+          example: "文山區"
+        religion:
+          type: string
+          example: "道教"
+        addr:
+          type: string
+          example: "忠順街一段10巷9號3樓"
+        tel:
+          type: string
+          example: "02-29343086"
         longitude:
           description: "longitude of the building's coordinate"
           type: number
