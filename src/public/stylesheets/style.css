@@ -1,6 +1,7 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-image: url("../img/gold.jpg");
 }
 
 a {
@@ -25,4 +26,52 @@ body {
 #map {
   width: 100%;
   height: 100%;
+}
+
+div.tooltip {
+  position: absolute;
+  text-align: center;
+  padding: 5px;
+  background: honeydew;
+  font: 16px sans-serif;
+  font-weight: bold;
+  border: 1px solid black;
+  border-radius: 8px;
+  pointer-events: none; /* keep the mouseover when over the tooltip */
+}
+
+.temple-banner {
+  background-image: url("../img/temple-banner.jpeg");
+  color: gold;
+}
+
+.holy-form {
+  background: rgb(161, 60, 25)
+}
+
+.search-form-header {
+  background-image: url("../img/red.jpeg");
+}
+
+.submit-button {
+  margin: auto;
+  color: rgb(139, 6, 24);
+  background: gold;
+}
+
+.nav-tabs .nav-link {
+  background: rgb(139, 6, 24);
+  color: gold;
+}
+
+.nav-tabs .nav-link.active {
+  background: gold;
+  color: rgb(139, 6, 24);
+}
+
+.holy-text {
+  border-radius: 10;
+  background: gold;
+  border-radius: 10px;
+  text: darkred;
 }
