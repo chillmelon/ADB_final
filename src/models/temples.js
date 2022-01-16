@@ -10,13 +10,20 @@ const Temple = {
 			return undefined;
 		}
 	},
-	async get_by_god(god) {
+	async get_by_god(data) {
 		try {
-			let sql = "SELECT * from temples"
-				+ " " + "WHERE god_0 = $1"
-				+ " " + "OR god_1 = $1"
-				+ " " + "OR god_2 = $1;";
-			let result = await db.query(sql, [god]);
+			let sql = "SELECT * from temples WHERE"
+				+ "(god_0 = $1 OR god_1 = $1 OR god_2 = $1)"
+				+ "AND" + "($2::text is null OR city = $2)"
+				+ "AND" + "($3::text is null OR dist = $3);";
+
+			let values = [
+				data.god,
+				data.city,
+				data.district
+			];
+
+			let result = await db.query(sql, values);
 			console.log(result);
 			return result.rows;
 		} catch (error) {

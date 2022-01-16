@@ -41,7 +41,7 @@ module.exports = function () {
 
 		if (data.god) {
 			houses = await House.get_by_god(data);
-			temples = await Temple.get_by_god(data.god);
+			temples = await Temple.get_by_god(data);
 		} else {
 			houses = await House.get(data);
 		}
