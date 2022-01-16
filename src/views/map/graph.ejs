@@ -1,4 +1,8 @@
-<div id='mainContainer'>
+<form class="d-flex graph-search">
+  <input class="form-control me-2 god_query" type="search" placeholder="Search" aria-label="Search">
+  <button class="btn btn-outline-success graph-btn" type="button">Search</button>
+</form>
+<div id='mainContainer'>  
   <svg width="1360" height="800"></svg>
 </div>
 <script>
@@ -78,23 +82,30 @@
           }
         })
         console.log(tmp_idx)
-        //generate relation
-        let tmp = tmp_idx[2]
-        tmp_idx[2] = tmp_idx[3]
-        tmp_idx[3] = tmp
-        for (let i=0;i<tmp_idx.length-1;i++){
-          console.log(ret.nodes[tmp_idx[i]].id)
-          let data = {}
-          data.idx = relation_idx+=1
-          data.source = ret.nodes[tmp_idx[i]]
-          data.target = ret.nodes[tmp_idx[i+1]]
-          data.value = 1
-          ret.links.push(data)
-        }
+        let data = {}
+        data.idx = relation_idx
+        data.source = ret.nodes[tmp_idx[0]]
+        data.target = ret.nodes[tmp_idx[1]]
+        data.value = 1
+        ret.links.push(data)
+        relation_idx+=1
+        let data2 = {}
+        data2.idx = relation_idx
+        data2.source = ret.nodes[tmp_idx[1]]
+        data2.target = ret.nodes[tmp_idx[2]]
+        data2.value = 1
+        ret.links.push(data2)
+        relation_idx+=1
+        let data3 = {}
+        data3.idx = relation_idx
+        data3.source = ret.nodes[tmp_idx[3]]
+        data3.target = ret.nodes[tmp_idx[2]]
+        data3.value = 1
+        ret.links.push(data3)
+        relation_idx+=1
       })
       return ret
     }
-    
     var svg = d3.select("svg"),
         width = +svg.attr("width"),
         height = +svg.attr("height");
@@ -105,70 +116,72 @@
         .force("link", d3.forceLink().id(function(d) { return d.id; }))
         .force("charge", d3.forceManyBody())
         .force("center", d3.forceCenter(width / 2, height / 2));
-    
-    axios.post(
-      "/api/territory/graph",
-      { god_name: '福德正神', districts: ['新莊區', '林口區', '五股區', '泰山區', '中正區'] }
-    ).then((result) => {
-      console.log(result);
-      graph = convert2d3(result.data)
-      var link = svg.append("g")
-          .attr("class", "links")
-        .selectAll("line")
-        .data(graph.links)
-        .enter().append("line")
-          .attr("stroke-width", function(d) { return Math.sqrt(d.value); });
-      var node = svg.append("g")
-          .attr("class", "nodes")
-        .selectAll("circle")
-        .data(graph.nodes)
-        .enter().append("circle")
-          .attr("r", 5)
-          .attr("fill", function(d) { return color(d.group); })
-          .call(d3.drag()
-              .on("start", dragstarted)
-              .on("drag", dragged)
-              .on("end", dragended));
-    
-      node.append("title")
-          .text(function(d) { return d.id; });
-      const tooltip = d3.select('#mainContainer').append("div")
-          .classed("tooltip", true)
-          .style("opacity", 0) // start invisible
-      node
-        .on("mouseover", function(d) {
-          tooltip.transition()
-            .duration(300)
-            .style("opacity", 1) // show the tooltip
-          tooltip.html(generate_tooltips(d))
-            .style("left", (d3.event.pageX - d3.select('.tooltip').node().offsetWidth - 5) + "px")
-            .style("top", (d3.event.pageY - d3.select('.tooltip').node().offsetHeight) + "px");
-        })
-        .on("mouseleave", function(d) {
-        tooltip.transition()
-          .duration(200)
-          .style("opacity", 0)
-        })
+    $('.graph-btn').on('click',function(e){
+      let god_name = $('.god_query').val()
+      axios.post(
+        "/api/territory/graph",
+        { god_name: god_name, districts: ['新莊區', '林口區', '五股區', '泰山區', '中正區'] }
+      ).then((result) => {
+          console.log(result);
+          graph = convert2d3(result.data)
+          var link = svg.append("g")
+              .attr("class", "links")
+            .selectAll("line")
+            .data(graph.links)
+            .enter().append("line")
+              .attr("stroke-width", function(d) { return Math.sqrt(d.value); });
+          var node = svg.append("g")
+              .attr("class", "nodes")
+            .selectAll("circle")
+            .data(graph.nodes)
+            .enter().append("circle")
+              .attr("r", 5)
+              .attr("fill", function(d) { return color(d.group); })
+              .call(d3.drag()
+                  .on("start", dragstarted)
+                  .on("drag", dragged)
+                  .on("end", dragended));
+        
+          node.append("title")
+              .text(function(d) { return d.id; });
+          const tooltip = d3.select('#mainContainer').append("div")
+              .classed("tooltip", true)
+              .style("opacity", 0) // start invisible
+          node
+            .on("mouseover", function(d) {
+              tooltip.transition()
+                .duration(300)
+                .style("opacity", 1) // show the tooltip
+              tooltip.html(generate_tooltips(d))
+                .style("left", (d3.event.pageX - d3.select('.tooltip').node().offsetWidth - 5) + "px")
+                .style("top", (d3.event.pageY - d3.select('.tooltip').node().offsetHeight) + "px");
+            })
+            .on("mouseleave", function(d) {
+            tooltip.transition()
+              .duration(200)
+              .style("opacity", 0)
+            })
 
-      simulation
-          .nodes(graph.nodes)
-          .on("tick", ticked);
-    
-      simulation.force("link")
-          .links(graph.links);
-    
-      function ticked() {
-        link
-            .attr("x1", function(d) { return d.source.x; })
-            .attr("y1", function(d) { return d.source.y; })
-            .attr("x2", function(d) { return d.target.x; })
-            .attr("y2", function(d) { return d.target.y; });
-    
-        node
-            .attr("cx", function(d) { return d.x; })
-            .attr("cy", function(d) { return d.y; });
-      }
-  });
+          simulation
+              .nodes(graph.nodes)
+              .on("tick", ticked);
+        
+          simulation.force("link")
+              .links(graph.links);
+        
+          function ticked() {
+            link
+                .attr("x1", function(d) { return d.source.x; })
+                .attr("y1", function(d) { return d.source.y; })
+                .attr("x2", function(d) { return d.target.x; })
+                .attr("y2", function(d) { return d.target.y; });
+        
+            node
+                .attr("cx", function(d) { return d.x; })
+                .attr("cy", function(d) { return d.y; });
+          }
+      });
+    })
     
     function dragstarted(d) {
       if (!d3.event.active) simulation.alphaTarget(0.3).restart();

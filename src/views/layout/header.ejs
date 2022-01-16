@@ -10,7 +10,7 @@
       </li>
     </ul>
     <button
-      class="navbar-toggler"
+      class="navbar-toggler map-search"
       type="button"
       data-bs-toggle="offcanvas"
       data-bs-target="#offcanvasNavbar"
@@ -43,5 +43,6 @@
   if (location.href.indexOf("graph") != -1) {
     $(".home").removeClass("active");
     $(".graph").addClass("active");
+    $('.map-search').css('display','none')
   }
 </script>

@@ -22,7 +22,7 @@ services:
       - "7474:7474"
       - "7687:7687"
     volumes:
-      - ./neo4j/close1.csv:/var/lib/neo4j/import/close_300.csv
+      - ./neo4j/close_300.csv:/var/lib/neo4j/import/close_300.csv
       - ./neo4j/houses.csv:/var/lib/neo4j/import/houses.csv
       - ./neo4j/gods.csv:/var/lib/neo4j/import/gods.csv
       - ./neo4j/temple_unify.csv:/var/lib/neo4j/import/temple_unify.csv
