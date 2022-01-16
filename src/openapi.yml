@@ -14,6 +14,10 @@ paths:
             schema:
               type: object
               properties:
+                god:
+                  description: the name of god
+                  type: string
+                  example: "福德正神"
                 city:
                   description: city name
                   type: string
@@ -36,33 +40,39 @@ paths:
                   example: 2
                 building_type:
                   description: type of building (should be the corresponding index)
-                  type: integer
-                  enum:
-                    - 0 # 住宅大樓(11層含以上有電梯)
-                    - 1 # 華廈(10層含以下有電梯)
-                    - 2 # 公寓(5樓含以下無電梯)
-                    - 3 # 透天厝
-                    - 4 # 套房(1房1廳1衛)
-                    - 5 # 店面(店鋪)
-                    - 6 # 辦公商業大樓
-                    - 7 # 廠辦
-                    - 8 # 其他
+                  type: array
+                  items:
+                    type: integer
+                    enum:
+                      - 0 # 住宅大樓(11層含以上有電梯)
+                      - 1 # 華廈(10層含以下有電梯)
+                      - 2 # 公寓(5樓含以下無電梯)
+                      - 3 # 透天厝
+                      - 4 # 套房(1房1廳1衛)
+                      - 5 # 店面(店鋪)
+                      - 6 # 辦公商業大樓
+                      - 7 # 廠辦
+                      - 8 # 其他
+                    example: [0, 1]
                 parking_type:
                   description: type of parking (should be the corresponding index)
-                  type: integer
-                  enum:
-                    - 0 # 無
-                    - 1 # 坡道平面
-                    - 2 # 坡道機械
-                    - 3 # 升降機械
-                    - 4 # 一樓平面
-                    - 5 # 升降平面
-                    - 6 # 塔式車位
-                    - 7 # 其他
+                  type: array
+                  items:
+                    type: integer
+                    enum:
+                      - 0 # 無
+                      - 1 # 坡道平面
+                      - 2 # 坡道機械
+                      - 3 # 升降機械
+                      - 4 # 一樓平面
+                      - 5 # 升降平面
+                      - 6 # 塔式車位
+                      - 7 # 其他
+                  example: [1, 2]
                 age_lower:
                   description: building age's lower bound
                   type: integer
-                  example: 13
+                  example: 2
                 age_upper:
                   description: building age's upper bound
                   type: integer
@@ -70,11 +80,11 @@ paths:
                 price_sqm_lower:
                   description: "lower bound of square meter price, unit: NTD"
                   type: integer
-                  example: 10
+                  example: 100000
                 price_sqm_upper:
                   description: "upper bound of square meter price, unit: NTD"
                   type: integer
-                  example: 30
+                  example: 500000
                 balcony:
                   description: want balcony or not
                   type: boolean
