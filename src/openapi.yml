@@ -1,0 +1,191 @@
+openapi: "3.0.0"
+info:
+  version: 1.0.0
+  title: Holy real estate
+  description: An api to help you find your holy house.
+paths:
+  /api/house:
+    post:
+      description: return a list of house based on the preferences.
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                city:
+                  description: city name
+                  type: string
+                  example: "臺北市"
+                district:
+                  description: district or town name
+                  type: string
+                  example: "文山區"
+                bed_room:
+                  description: number of bed_rooms
+                  type: integer
+                  example: 3
+                living_room:
+                  description: number of living_room or dining room
+                  type: integer
+                  example: 2
+                toilet:
+                  description: number of bathroom or restroom
+                  type: integer
+                  example: 2
+                building_type:
+                  description: type of building (should be the corresponding index)
+                  type: integer
+                  enum:
+                    - 0 # 住宅大樓(11層含以上有電梯)
+                    - 1 # 華廈(10層含以下有電梯)
+                    - 2 # 公寓(5樓含以下無電梯)
+                    - 3 # 透天厝
+                    - 4 # 套房(1房1廳1衛)
+                    - 5 # 店面(店鋪)
+                    - 6 # 辦公商業大樓
+                    - 7 # 廠辦
+                    - 8 # 其他
+                parking_type:
+                  description: type of parking (should be the corresponding index)
+                  type: integer
+                  enum:
+                    - 0 # 無
+                    - 1 # 坡道平面
+                    - 2 # 坡道機械
+                    - 3 # 升降機械
+                    - 4 # 一樓平面
+                    - 5 # 升降平面
+                    - 6 # 塔式車位
+                    - 7 # 其他
+                age_lower:
+                  description: building age's lower bound
+                  type: integer
+                  example: 13
+                age_upper:
+                  description: building age's upper bound
+                  type: integer
+                  example: 30
+                price_sqm_lower:
+                  description: "lower bound of square meter price, unit: NTD"
+                  type: integer
+                  example: 10
+                price_sqm_upper:
+                  description: "upper bound of square meter price, unit: NTD"
+                  type: integer
+                  example: 30
+                balcony:
+                  description: want balcony or not
+                  type: boolean
+                  example: true
+      responses:
+        "200":
+          description: A list of houses of preferences.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/House"
+        "404":
+          description: No house of preferences found.
+        "500":
+          description: Database error.
+        default:
+          description: Unexpected error.
+
+components:
+  schemas:
+    House:
+      type: object
+      properties:
+        id:
+          type: integer
+          example: 1
+        city:
+          type: string
+          example: "臺北市"
+        district:
+          type: string
+          example: "文山區"
+        address:
+          type: string
+          example: "忠順街一段10巷9號3樓"
+        constructed_date:
+          type: string
+          format: datetime
+          example: "1980-10-07T00:00:00.000Z"
+        age:
+          description: the age of the building
+          type: integer
+          example: 42
+        management:
+          description: the buiding has managing organization or not
+          type: boolean
+          example: false
+        bed_room:
+          description: number of bed_rooms
+          type: integer
+          example: 3
+        living_room:
+          description: number of living_room or dining room
+          type: integer
+          example: 2
+        toilet:
+          description: number of bathroom or restroom
+          type: integer
+          example: 2
+        building_type:
+          description: type of building (should be the corresponding index)
+          type: integer
+          enum:
+            - 0 # 住宅大樓(11層含以上有電梯)
+            - 1 # 華廈(10層含以下有電梯)
+            - 2 # 公寓(5樓含以下無電梯)
+            - 3 # 透天厝
+            - 4 # 套房(1房1廳1衛)
+            - 5 # 店面(店鋪)
+            - 6 # 辦公商業大樓
+            - 7 # 廠辦
+            - 8 # 其他
+        parking_type:
+          description: type of parking (should be the corresponding index)
+          type: integer
+          enum:
+            - 0 # 無
+            - 1 # 坡道平面
+            - 2 # 坡道機械
+            - 3 # 升降機械
+            - 4 # 一樓平面
+            - 5 # 升降平面
+            - 6 # 塔式車位
+            - 7 # 其他
+        price_sqm:
+          description: "square meter price, unit: NTD"
+          type: integer
+          example: 100000
+        price_total:
+          description: "total price, unit: NTD"
+          type: integer
+          example: 6000000
+        building_area:
+          description: "sum of the building's area"
+          type: number
+          format: double
+        land_area:
+          description: "area of level ground"
+          type: number
+          format: double
+        parking_area:
+          description: "area of parking"
+          type: number
+          format: double
+        longitude:
+          description: "longitude of the building's coordinate"
+          type: number
+          format: double
+        latitude:
+          description: "latitude of the building's coordinate"
+          type: number
+          format: double
