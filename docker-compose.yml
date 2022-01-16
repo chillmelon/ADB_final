@@ -11,6 +11,7 @@ services:
     ports:
       - "5432:5432"
     volumes:
+      - ./data/temples.csv:/data/temples.csv
       - ./data/houses.csv:/data/houses.csv
       - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql
   db2:
@@ -43,10 +44,12 @@ services:
       - "3000:3000"
     links:
       - db:db
+      - db2:db2
     depends_on:
       - db
     environment:
       - DB_HOST=db
       - DB_USER=root
       - DB_PASSWORD=root
+      - DB_DATABASE=adb_final
     command: npm start

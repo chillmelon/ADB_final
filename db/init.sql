@@ -1,7 +1,3 @@
-BEGIN;
-
-CREATE SCHEMA IF NOT EXISTS adb_final;
-
 CREATE TABLE houses (
 	ID SERIAL PRIMARY KEY,
 	city text,
@@ -26,9 +22,30 @@ CREATE TABLE houses (
 	longitude double precision
 );
 
-COPY houses FROM '/data/houses.csv' csv header;
+CREATE TABLE temples (
+	ID SERIAL PRIMARY KEY,
+	name text,
+	god_0 text,
+	god_1 text,
+	god_2 text,
+	city text,
+	addr text,
+	religion text,
+	tel text,
+	principal text,
+	longitude double precision,
+	latitude double precision,
+	dist text
+);
 
-ALTER TABLE houses ADD COLUMN geom geometry(point, 4326);
-UPDATE houses SET geom = ST_SetSRID(ST_MakePoint(longitude, latitude), 4326);
+COPY houses FROM '/data/houses.csv' DELIMITER ',' CSV HEADER;
+COPY temples FROM '/data/temples.csv' DELIMITER ',' CSV HEADER;
 
-COMMIT;
+ALTER TABLE houses ADD COLUMN geog geography(point, 4326);
+UPDATE houses SET geog = ST_SetSRID(ST_MakePoint(longitude, latitude), 4326);
+
+ALTER TABLE temples ADD COLUMN geog geography(point, 4326);
+UPDATE temples SET geog = ST_SetSRID(ST_MakePoint(longitude, latitude), 4326);
+
+CREATE INDEX house_geography_index ON houses USING GIST (geog);
+CREATE INDEX temple_geography_index ON temples USING GIST (geog);

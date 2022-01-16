@@ -1,0 +1,3674 @@
+[
+    {
+        "keys": [
+            "god",
+            "temple",
+            "house",
+            "district",
+            "rel1",
+            "rel2",
+            "rel3"
+        ],
+        "length": 7,
+        "_fields": [
+            {
+                "identity": {
+                    "low": 2077,
+                    "high": 0
+                },
+                "labels": [
+                    "god"
+                ],
+                "properties": {
+                    "name": "關聖帝君"
+                }
+            },
+            {
+                "identity": {
+                    "low": 1506,
+                    "high": 0
+                },
+                "labels": [
+                    "temple"
+                ],
+                "properties": {
+                    "principal": "王永昌",
+                    "templeId": "1764028",
+                    "city": "臺北市",
+                    "latitude": "25.0320205688477",
+                    "name": "財團法人台北市白雲禪寺",
+                    "tel": "02-27043214",
+                    "reg_type": "正式登記",
+                    "addr": "臺北市大安區義安里安和路2段20巷2號",
+                    "longitude": "121.552062988281",
+                    "religion": "佛教"
+                }
+            },
+            {
+                "identity": {
+                    "low": 3799,
+                    "high": 0
+                },
+                "labels": [
+                    "house"
+                ],
+                "properties": {
+                    "houseId": {
+                        "low": 1584,
+                        "high": 0
+                    },
+                    "bed_room": "3",
+                    "city": "臺北市",
+                    "latitude": "25.03087",
+                    "price_parking": "0",
+                    "price_sqm": "236552",
+                    "constructed_date": "1987-03-25",
+                    "building_area": "117.59",
+                    "land_area": "23.06",
+                    "parking_type": "5",
+                    "balcony": "True",
+                    "toilet": "2",
+                    "living_room": "2",
+                    "management": "False",
+                    "district": "大安區",
+                    "parking_area": "0.0",
+                    "addr": "敦化南路二段63巷64號6樓",
+                    "age": "35",
+                    "price_total": "30080000",
+                    "building_type": "1",
+                    "longitude": "121.55201"
+                }
+            },
+            {
+                "identity": {
+                    "low": 31660,
+                    "high": 0
+                },
+                "labels": [
+                    "district"
+                ],
+                "properties": {
+                    "name": "大安區"
+                }
+            },
+            {
+                "identity": {
+                    "low": 1560,
+                    "high": 0
+                },
+                "start": {
+                    "low": 2077,
+                    "high": 0
+                },
+                "end": {
+                    "low": 1506,
+                    "high": 0
+                },
+                "type": "IN_CHARGE_OF",
+                "properties": {}
+            },
+            {
+                "identity": {
+                    "low": 128968,
+                    "high": 0
+                },
+                "start": {
+                    "low": 3799,
+                    "high": 0
+                },
+                "end": {
+                    "low": 1506,
+                    "high": 0
+                },
+                "type": "CLOSE_TO",
+                "properties": {
+                    "distance": 0.067443
+                }
+            },
+            {
+                "identity": {
+                    "low": 1615234,
+                    "high": 0
+                },
+                "start": {
+                    "low": 3799,
+                    "high": 0
+                },
+                "end": {
+                    "low": 31660,
+                    "high": 0
+                },
+                "type": "LOCATED_IN",
+                "properties": {}
+            }
+        ],
+        "_fieldLookup": {
+            "god": 0,
+            "temple": 1,
+            "house": 2,
+            "district": 3,
+            "rel1": 4,
+            "rel2": 5,
+            "rel3": 6
+        }
+    },
+    {
+        "keys": [
+            "god",
+            "temple",
+            "house",
+            "district",
+            "rel1",
+            "rel2",
+            "rel3"
+        ],
+        "length": 7,
+        "_fields": [
+            {
+                "identity": {
+                    "low": 2077,
+                    "high": 0
+                },
+                "labels": [
+                    "god"
+                ],
+                "properties": {
+                    "name": "關聖帝君"
+                }
+            },
+            {
+                "identity": {
+                    "low": 1506,
+                    "high": 0
+                },
+                "labels": [
+                    "temple"
+                ],
+                "properties": {
+                    "principal": "王永昌",
+                    "templeId": "1764028",
+                    "city": "臺北市",
+                    "latitude": "25.0320205688477",
+                    "name": "財團法人台北市白雲禪寺",
+                    "tel": "02-27043214",
+                    "reg_type": "正式登記",
+                    "addr": "臺北市大安區義安里安和路2段20巷2號",
+                    "longitude": "121.552062988281",
+                    "religion": "佛教"
+                }
+            },
+            {
+                "identity": {
+                    "low": 5627,
+                    "high": 0
+                },
+                "labels": [
+                    "house"
+                ],
+                "properties": {
+                    "houseId": {
+                        "low": 3412,
+                        "high": 0
+                    },
+                    "bed_room": "4",
+                    "city": "臺北市",
+                    "latitude": "25.02794",
+                    "price_parking": "0",
+                    "constructed_date": "1995-12-13",
+                    "price_sqm": "238578",
+                    "building_area": "105.74000000000001",
+                    "land_area": "49.18",
+                    "parking_type": "3",
+                    "balcony": "True",
+                    "toilet": "2",
+                    "living_room": "2",
+                    "management": "True",
+                    "district": "大安區",
+                    "parking_area": "0.0",
+                    "addr": "樂利路２１巷３號",
+                    "age": "27",
+                    "price_total": "40000000",
+                    "building_type": "1",
+                    "longitude": "121.55147"
+                }
+            },
+            {
+                "identity": {
+                    "low": 31660,
+                    "high": 0
+                },
+                "labels": [
+                    "district"
+                ],
+                "properties": {
+                    "name": "大安區"
+                }
+            },
+            {
+                "identity": {
+                    "low": 1560,
+                    "high": 0
+                },
+                "start": {
+                    "low": 2077,
+                    "high": 0
+                },
+                "end": {
+                    "low": 1506,
+                    "high": 0
+                },
+                "type": "IN_CHARGE_OF",
+                "properties": {}
+            },
+            {
+                "identity": {
+                    "low": 273350,
+                    "high": 0
+                },
+                "start": {
+                    "low": 5627,
+                    "high": 0
+                },
+                "end": {
+                    "low": 1506,
+                    "high": 0
+                },
+                "type": "CLOSE_TO",
+                "properties": {
+                    "distance": 0.247258
+                }
+            },
+            {
+                "identity": {
+                    "low": 1617062,
+                    "high": 0
+                },
+                "start": {
+                    "low": 5627,
+                    "high": 0
+                },
+                "end": {
+                    "low": 31660,
+                    "high": 0
+                },
+                "type": "LOCATED_IN",
+                "properties": {}
+            }
+        ],
+        "_fieldLookup": {
+            "god": 0,
+            "temple": 1,
+            "house": 2,
+            "district": 3,
+            "rel1": 4,
+            "rel2": 5,
+            "rel3": 6
+        }
+    },
+    {
+        "keys": [
+            "god",
+            "temple",
+            "house",
+            "district",
+            "rel1",
+            "rel2",
+            "rel3"
+        ],
+        "length": 7,
+        "_fields": [
+            {
+                "identity": {
+                    "low": 2077,
+                    "high": 0
+                },
+                "labels": [
+                    "god"
+                ],
+                "properties": {
+                    "name": "關聖帝君"
+                }
+            },
+            {
+                "identity": {
+                    "low": 1506,
+                    "high": 0
+                },
+                "labels": [
+                    "temple"
+                ],
+                "properties": {
+                    "principal": "王永昌",
+                    "templeId": "1764028",
+                    "city": "臺北市",
+                    "latitude": "25.0320205688477",
+                    "name": "財團法人台北市白雲禪寺",
+                    "tel": "02-27043214",
+                    "reg_type": "正式登記",
+                    "addr": "臺北市大安區義安里安和路2段20巷2號",
+                    "longitude": "121.552062988281",
+                    "religion": "佛教"
+                }
+            },
+            {
+                "identity": {
+                    "low": 3217,
+                    "high": 0
+                },
+                "labels": [
+                    "house"
+                ],
+                "properties": {
+                    "houseId": {
+                        "low": 1002,
+                        "high": 0
+                    },
+                    "bed_room": "5",
+                    "city": "臺北市",
+                    "latitude": "25.02971",
+                    "price_parking": "0",
+                    "price_sqm": "171990",
+                    "constructed_date": "1985-04-18",
+                    "building_area": "91.67",
+                    "land_area": "26.1",
+                    "balcony": "False",
+                    "parking_type": "0",
+                    "toilet": "2",
+                    "living_room": "1",
+                    "management": "False",
+                    "parking_area": "0.0",
+                    "district": "大安區",
+                    "addr": "通化街９８巷６之１號",
+                    "age": "37",
+                    "building_type": "2",
+                    "price_total": "16800000",
+                    "longitude": "121.55374"
+                }
+            },
+            {
+                "identity": {
+                    "low": 31660,
+                    "high": 0
+                },
+                "labels": [
+                    "district"
+                ],
+                "properties": {
+                    "name": "大安區"
+                }
+            },
+            {
+                "identity": {
+                    "low": 1560,
+                    "high": 0
+                },
+                "start": {
+                    "low": 2077,
+                    "high": 0
+                },
+                "end": {
+                    "low": 1506,
+                    "high": 0
+                },
+                "type": "IN_CHARGE_OF",
+                "properties": {}
+            },
+            {
+                "identity": {
+                    "low": 82564,
+                    "high": 0
+                },
+                "start": {
+                    "low": 3217,
+                    "high": 0
+                },
+                "end": {
+                    "low": 1506,
+                    "high": 0
+                },
+                "type": "CLOSE_TO",
+                "properties": {
+                    "distance": 0.230427
+                }
+            },
+            {
+                "identity": {
+                    "low": 1614652,
+                    "high": 0
+                },
+                "start": {
+                    "low": 3217,
+                    "high": 0
+                },
+                "end": {
+                    "low": 31660,
+                    "high": 0
+                },
+                "type": "LOCATED_IN",
+                "properties": {}
+            }
+        ],
+        "_fieldLookup": {
+            "god": 0,
+            "temple": 1,
+            "house": 2,
+            "district": 3,
+            "rel1": 4,
+            "rel2": 5,
+            "rel3": 6
+        }
+    },
+    {
+        "keys": [
+            "god",
+            "temple",
+            "house",
+            "district",
+            "rel1",
+            "rel2",
+            "rel3"
+        ],
+        "length": 7,
+        "_fields": [
+            {
+                "identity": {
+                    "low": 2077,
+                    "high": 0
+                },
+                "labels": [
+                    "god"
+                ],
+                "properties": {
+                    "name": "關聖帝君"
+                }
+            },
+            {
+                "identity": {
+                    "low": 1506,
+                    "high": 0
+                },
+                "labels": [
+                    "temple"
+                ],
+                "properties": {
+                    "principal": "王永昌",
+                    "templeId": "1764028",
+                    "city": "臺北市",
+                    "latitude": "25.0320205688477",
+                    "name": "財團法人台北市白雲禪寺",
+                    "tel": "02-27043214",
+                    "reg_type": "正式登記",
+                    "addr": "臺北市大安區義安里安和路2段20巷2號",
+                    "longitude": "121.552062988281",
+                    "religion": "佛教"
+                }
+            },
+            {
+                "identity": {
+                    "low": 5668,
+                    "high": 0
+                },
+                "labels": [
+                    "house"
+                ],
+                "properties": {
+                    "houseId": {
+                        "low": 3453,
+                        "high": 0
+                    },
+                    "bed_room": "0",
+                    "city": "臺北市",
+                    "latitude": "25.03382",
+                    "price_parking": "0",
+                    "constructed_date": "1985-10-15",
+                    "price_sqm": "284846",
+                    "building_area": "186.25",
+                    "land_area": "43.47",
+                    "parking_type": "0",
+                    "balcony": "False",
+                    "toilet": "2",
+                    "living_room": "1",
+                    "management": "False",
+                    "district": "大安區",
+                    "parking_area": "0.0",
+                    "addr": "安和路一段112巷16號",
+                    "age": "37",
+                    "price_total": "55300000",
+                    "building_type": "5",
+                    "longitude": "121.55083"
+                }
+            },
+            {
+                "identity": {
+                    "low": 31660,
+                    "high": 0
+                },
+                "labels": [
+                    "district"
+                ],
+                "properties": {
+                    "name": "大安區"
+                }
+            },
+            {
+                "identity": {
+                    "low": 1560,
+                    "high": 0
+                },
+                "start": {
+                    "low": 2077,
+                    "high": 0
+                },
+                "end": {
+                    "low": 1506,
+                    "high": 0
+                },
+                "type": "IN_CHARGE_OF",
+                "properties": {}
+            },
+            {
+                "identity": {
+                    "low": 276388,
+                    "high": 0
+                },
+                "start": {
+                    "low": 5668,
+                    "high": 0
+                },
+                "end": {
+                    "low": 1506,
+                    "high": 0
+                },
+                "type": "CLOSE_TO",
+                "properties": {
+                    "distance": 0.172921
+                }
+            },
+            {
+                "identity": {
+                    "low": 1617103,
+                    "high": 0
+                },
+                "start": {
+                    "low": 5668,
+                    "high": 0
+                },
+                "end": {
+                    "low": 31660,
+                    "high": 0
+                },
+                "type": "LOCATED_IN",
+                "properties": {}
+            }
+        ],
+        "_fieldLookup": {
+            "god": 0,
+            "temple": 1,
+            "house": 2,
+            "district": 3,
+            "rel1": 4,
+            "rel2": 5,
+            "rel3": 6
+        }
+    },
+    {
+        "keys": [
+            "god",
+            "temple",
+            "house",
+            "district",
+            "rel1",
+            "rel2",
+            "rel3"
+        ],
+        "length": 7,
+        "_fields": [
+            {
+                "identity": {
+                    "low": 2077,
+                    "high": 0
+                },
+                "labels": [
+                    "god"
+                ],
+                "properties": {
+                    "name": "關聖帝君"
+                }
+            },
+            {
+                "identity": {
+                    "low": 1506,
+                    "high": 0
+                },
+                "labels": [
+                    "temple"
+                ],
+                "properties": {
+                    "principal": "王永昌",
+                    "templeId": "1764028",
+                    "city": "臺北市",
+                    "latitude": "25.0320205688477",
+                    "name": "財團法人台北市白雲禪寺",
+                    "tel": "02-27043214",
+                    "reg_type": "正式登記",
+                    "addr": "臺北市大安區義安里安和路2段20巷2號",
+                    "longitude": "121.552062988281",
+                    "religion": "佛教"
+                }
+            },
+            {
+                "identity": {
+                    "low": 4748,
+                    "high": 0
+                },
+                "labels": [
+                    "house"
+                ],
+                "properties": {
+                    "houseId": {
+                        "low": 2533,
+                        "high": 0
+                    },
+                    "bed_room": "3",
+                    "city": "臺北市",
+                    "latitude": "25.03497",
+                    "price_parking": "0",
+                    "price_sqm": "244245",
+                    "constructed_date": "1985-07-19",
+                    "building_area": "110.28999999999999",
+                    "land_area": "24.71",
+                    "balcony": "True",
+                    "parking_type": "0",
+                    "toilet": "2",
+                    "living_room": "2",
+                    "management": "False",
+                    "parking_area": "0.0",
+                    "district": "大安區",
+                    "addr": "信義路四段２６５巷２０弄９號４樓",
+                    "age": "37",
+                    "building_type": "1",
+                    "price_total": "31300000",
+                    "longitude": "121.55408"
+                }
+            },
+            {
+                "identity": {
+                    "low": 31660,
+                    "high": 0
+                },
+                "labels": [
+                    "district"
+                ],
+                "properties": {
+                    "name": "大安區"
+                }
+            },
+            {
+                "identity": {
+                    "low": 1560,
+                    "high": 0
+                },
+                "start": {
+                    "low": 2077,
+                    "high": 0
+                },
+                "end": {
+                    "low": 1506,
+                    "high": 0
+                },
+                "type": "IN_CHARGE_OF",
+                "properties": {}
+            },
+            {
+                "identity": {
+                    "low": 206096,
+                    "high": 0
+                },
+                "start": {
+                    "low": 4748,
+                    "high": 0
+                },
+                "end": {
+                    "low": 1506,
+                    "high": 0
+                },
+                "type": "CLOSE_TO",
+                "properties": {
+                    "distance": 0.283086
+                }
+            },
+            {
+                "identity": {
+                    "low": 1616183,
+                    "high": 0
+                },
+                "start": {
+                    "low": 4748,
+                    "high": 0
+                },
+                "end": {
+                    "low": 31660,
+                    "high": 0
+                },
+                "type": "LOCATED_IN",
+                "properties": {}
+            }
+        ],
+        "_fieldLookup": {
+            "god": 0,
+            "temple": 1,
+            "house": 2,
+            "district": 3,
+            "rel1": 4,
+            "rel2": 5,
+            "rel3": 6
+        }
+    },
+    {
+        "keys": [
+            "god",
+            "temple",
+            "house",
+            "district",
+            "rel1",
+            "rel2",
+            "rel3"
+        ],
+        "length": 7,
+        "_fields": [
+            {
+                "identity": {
+                    "low": 2077,
+                    "high": 0
+                },
+                "labels": [
+                    "god"
+                ],
+                "properties": {
+                    "name": "關聖帝君"
+                }
+            },
+            {
+                "identity": {
+                    "low": 1506,
+                    "high": 0
+                },
+                "labels": [
+                    "temple"
+                ],
+                "properties": {
+                    "principal": "王永昌",
+                    "templeId": "1764028",
+                    "city": "臺北市",
+                    "latitude": "25.0320205688477",
+                    "name": "財團法人台北市白雲禪寺",
+                    "tel": "02-27043214",
+                    "reg_type": "正式登記",
+                    "addr": "臺北市大安區義安里安和路2段20巷2號",
+                    "longitude": "121.552062988281",
+                    "religion": "佛教"
+                }
+            },
+            {
+                "identity": {
+                    "low": 6462,
+                    "high": 0
+                },
+                "labels": [
+                    "house"
+                ],
+                "properties": {
+                    "houseId": {
+                        "low": 4247,
+                        "high": 0
+                    },
+                    "bed_room": "3",
+                    "city": "臺北市",
+                    "latitude": "25.03215",
+                    "price_parking": "0",
+                    "price_sqm": "239136",
+                    "constructed_date": "1995-10-26",
+                    "building_area": "118.28",
+                    "land_area": "38.0",
+                    "parking_type": "3",
+                    "balcony": "True",
+                    "toilet": "2",
+                    "living_room": "2",
+                    "management": "False",
+                    "district": "大安區",
+                    "parking_area": "0.0",
+                    "addr": "敦化南路二段37巷16號4樓",
+                    "age": "27",
+                    "price_total": "40500000",
+                    "building_type": "1",
+                    "longitude": "121.55034"
+                }
+            },
+            {
+                "identity": {
+                    "low": 31660,
+                    "high": 0
+                },
+                "labels": [
+                    "district"
+                ],
+                "properties": {
+                    "name": "大安區"
+                }
+            },
+            {
+                "identity": {
+                    "low": 1560,
+                    "high": 0
+                },
+                "start": {
+                    "low": 2077,
+                    "high": 0
+                },
+                "end": {
+                    "low": 1506,
+                    "high": 0
+                },
+                "type": "IN_CHARGE_OF",
+                "properties": {}
+            },
+            {
+                "identity": {
+                    "low": 337756,
+                    "high": 0
+                },
+                "start": {
+                    "low": 6462,
+                    "high": 0
+                },
+                "end": {
+                    "low": 1506,
+                    "high": 0
+                },
+                "type": "CLOSE_TO",
+                "properties": {
+                    "distance": 0.192065
+                }
+            },
+            {
+                "identity": {
+                    "low": 1617897,
+                    "high": 0
+                },
+                "start": {
+                    "low": 6462,
+                    "high": 0
+                },
+                "end": {
+                    "low": 31660,
+                    "high": 0
+                },
+                "type": "LOCATED_IN",
+                "properties": {}
+            }
+        ],
+        "_fieldLookup": {
+            "god": 0,
+            "temple": 1,
+            "house": 2,
+            "district": 3,
+            "rel1": 4,
+            "rel2": 5,
+            "rel3": 6
+        }
+    },
+    {
+        "keys": [
+            "god",
+            "temple",
+            "house",
+            "district",
+            "rel1",
+            "rel2",
+            "rel3"
+        ],
+        "length": 7,
+        "_fields": [
+            {
+                "identity": {
+                    "low": 2077,
+                    "high": 0
+                },
+                "labels": [
+                    "god"
+                ],
+                "properties": {
+                    "name": "關聖帝君"
+                }
+            },
+            {
+                "identity": {
+                    "low": 1506,
+                    "high": 0
+                },
+                "labels": [
+                    "temple"
+                ],
+                "properties": {
+                    "principal": "王永昌",
+                    "templeId": "1764028",
+                    "city": "臺北市",
+                    "latitude": "25.0320205688477",
+                    "name": "財團法人台北市白雲禪寺",
+                    "tel": "02-27043214",
+                    "reg_type": "正式登記",
+                    "addr": "臺北市大安區義安里安和路2段20巷2號",
+                    "longitude": "121.552062988281",
+                    "religion": "佛教"
+                }
+            },
+            {
+                "identity": {
+                    "low": 4879,
+                    "high": 0
+                },
+                "labels": [
+                    "house"
+                ],
+                "properties": {
+                    "houseId": {
+                        "low": 2664,
+                        "high": 0
+                    },
+                    "bed_room": "0",
+                    "city": "臺北市",
+                    "latitude": "25.02877",
+                    "price_parking": "10000000",
+                    "constructed_date": "1989-08-10",
+                    "price_sqm": "121002",
+                    "land_area": "253.92",
+                    "building_area": "4719.26",
+                    "balcony": "False",
+                    "parking_type": "2",
+                    "toilet": "0",
+                    "living_room": "0",
+                    "management": "True",
+                    "district": "大安區",
+                    "parking_area": "150.7",
+                    "addr": "安和路二段９２號地下一樓",
+                    "age": "33",
+                    "price_total": "658000000",
+                    "building_type": "5",
+                    "longitude": "121.55024"
+                }
+            },
+            {
+                "identity": {
+                    "low": 31660,
+                    "high": 0
+                },
+                "labels": [
+                    "district"
+                ],
+                "properties": {
+                    "name": "大安區"
+                }
+            },
+            {
+                "identity": {
+                    "low": 1560,
+                    "high": 0
+                },
+                "start": {
+                    "low": 2077,
+                    "high": 0
+                },
+                "end": {
+                    "low": 1506,
+                    "high": 0
+                },
+                "type": "IN_CHARGE_OF",
+                "properties": {}
+            },
+            {
+                "identity": {
+                    "low": 215656,
+                    "high": 0
+                },
+                "start": {
+                    "low": 4879,
+                    "high": 0
+                },
+                "end": {
+                    "low": 1506,
+                    "high": 0
+                },
+                "type": "CLOSE_TO",
+                "properties": {
+                    "distance": 0.277951
+                }
+            },
+            {
+                "identity": {
+                    "low": 1616314,
+                    "high": 0
+                },
+                "start": {
+                    "low": 4879,
+                    "high": 0
+                },
+                "end": {
+                    "low": 31660,
+                    "high": 0
+                },
+                "type": "LOCATED_IN",
+                "properties": {}
+            }
+        ],
+        "_fieldLookup": {
+            "god": 0,
+            "temple": 1,
+            "house": 2,
+            "district": 3,
+            "rel1": 4,
+            "rel2": 5,
+            "rel3": 6
+        }
+    },
+    {
+        "keys": [
+            "god",
+            "temple",
+            "house",
+            "district",
+            "rel1",
+            "rel2",
+            "rel3"
+        ],
+        "length": 7,
+        "_fields": [
+            {
+                "identity": {
+                    "low": 2077,
+                    "high": 0
+                },
+                "labels": [
+                    "god"
+                ],
+                "properties": {
+                    "name": "關聖帝君"
+                }
+            },
+            {
+                "identity": {
+                    "low": 1506,
+                    "high": 0
+                },
+                "labels": [
+                    "temple"
+                ],
+                "properties": {
+                    "principal": "王永昌",
+                    "templeId": "1764028",
+                    "city": "臺北市",
+                    "latitude": "25.0320205688477",
+                    "name": "財團法人台北市白雲禪寺",
+                    "tel": "02-27043214",
+                    "reg_type": "正式登記",
+                    "addr": "臺北市大安區義安里安和路2段20巷2號",
+                    "longitude": "121.552062988281",
+                    "religion": "佛教"
+                }
+            },
+            {
+                "identity": {
+                    "low": 5026,
+                    "high": 0
+                },
+                "labels": [
+                    "house"
+                ],
+                "properties": {
+                    "houseId": {
+                        "low": 2811,
+                        "high": 0
+                    },
+                    "bed_room": "1",
+                    "city": "臺北市",
+                    "latitude": "25.033",
+                    "price_parking": "0",
+                    "constructed_date": "1996-07-05",
+                    "price_sqm": "258216",
+                    "building_area": "23.25",
+                    "land_area": "3.61",
+                    "balcony": "True",
+                    "parking_type": "0",
+                    "toilet": "1",
+                    "living_room": "1",
+                    "management": "True",
+                    "district": "大安區",
+                    "parking_area": "0.0",
+                    "addr": "信義路四段１８８號三樓之８",
+                    "age": "26",
+                    "price_total": "9900000",
+                    "building_type": "4",
+                    "longitude": "121.55175"
+                }
+            },
+            {
+                "identity": {
+                    "low": 31660,
+                    "high": 0
+                },
+                "labels": [
+                    "district"
+                ],
+                "properties": {
+                    "name": "大安區"
+                }
+            },
+            {
+                "identity": {
+                    "low": 1560,
+                    "high": 0
+                },
+                "start": {
+                    "low": 2077,
+                    "high": 0
+                },
+                "end": {
+                    "low": 1506,
+                    "high": 0
+                },
+                "type": "IN_CHARGE_OF",
+                "properties": {}
+            },
+            {
+                "identity": {
+                    "low": 226914,
+                    "high": 0
+                },
+                "start": {
+                    "low": 5026,
+                    "high": 0
+                },
+                "end": {
+                    "low": 1506,
+                    "high": 0
+                },
+                "type": "CLOSE_TO",
+                "properties": {
+                    "distance": 0.066979
+                }
+            },
+            {
+                "identity": {
+                    "low": 1616461,
+                    "high": 0
+                },
+                "start": {
+                    "low": 5026,
+                    "high": 0
+                },
+                "end": {
+                    "low": 31660,
+                    "high": 0
+                },
+                "type": "LOCATED_IN",
+                "properties": {}
+            }
+        ],
+        "_fieldLookup": {
+            "god": 0,
+            "temple": 1,
+            "house": 2,
+            "district": 3,
+            "rel1": 4,
+            "rel2": 5,
+            "rel3": 6
+        }
+    },
+    {
+        "keys": [
+            "god",
+            "temple",
+            "house",
+            "district",
+            "rel1",
+            "rel2",
+            "rel3"
+        ],
+        "length": 7,
+        "_fields": [
+            {
+                "identity": {
+                    "low": 2077,
+                    "high": 0
+                },
+                "labels": [
+                    "god"
+                ],
+                "properties": {
+                    "name": "關聖帝君"
+                }
+            },
+            {
+                "identity": {
+                    "low": 1506,
+                    "high": 0
+                },
+                "labels": [
+                    "temple"
+                ],
+                "properties": {
+                    "principal": "王永昌",
+                    "templeId": "1764028",
+                    "city": "臺北市",
+                    "latitude": "25.0320205688477",
+                    "name": "財團法人台北市白雲禪寺",
+                    "tel": "02-27043214",
+                    "reg_type": "正式登記",
+                    "addr": "臺北市大安區義安里安和路2段20巷2號",
+                    "longitude": "121.552062988281",
+                    "religion": "佛教"
+                }
+            },
+            {
+                "identity": {
+                    "low": 5274,
+                    "high": 0
+                },
+                "labels": [
+                    "house"
+                ],
+                "properties": {
+                    "houseId": {
+                        "low": 3059,
+                        "high": 0
+                    },
+                    "bed_room": "1",
+                    "city": "臺北市",
+                    "latitude": "25.03262",
+                    "price_parking": "0",
+                    "constructed_date": "2012-05-03",
+                    "price_sqm": "350669",
+                    "building_area": "30.84",
+                    "land_area": "7.92",
+                    "balcony": "True",
+                    "parking_type": "7",
+                    "toilet": "1",
+                    "living_room": "1",
+                    "management": "True",
+                    "district": "大安區",
+                    "parking_area": "14.2",
+                    "addr": "通安街８號九樓",
+                    "age": "10",
+                    "price_total": "23600000",
+                    "building_type": "1",
+                    "longitude": "121.55325"
+                }
+            },
+            {
+                "identity": {
+                    "low": 31660,
+                    "high": 0
+                },
+                "labels": [
+                    "district"
+                ],
+                "properties": {
+                    "name": "大安區"
+                }
+            },
+            {
+                "identity": {
+                    "low": 1560,
+                    "high": 0
+                },
+                "start": {
+                    "low": 2077,
+                    "high": 0
+                },
+                "end": {
+                    "low": 1506,
+                    "high": 0
+                },
+                "type": "IN_CHARGE_OF",
+                "properties": {}
+            },
+            {
+                "identity": {
+                    "low": 246370,
+                    "high": 0
+                },
+                "start": {
+                    "low": 5274,
+                    "high": 0
+                },
+                "end": {
+                    "low": 1506,
+                    "high": 0
+                },
+                "type": "CLOSE_TO",
+                "properties": {
+                    "distance": 0.136771
+                }
+            },
+            {
+                "identity": {
+                    "low": 1616709,
+                    "high": 0
+                },
+                "start": {
+                    "low": 5274,
+                    "high": 0
+                },
+                "end": {
+                    "low": 31660,
+                    "high": 0
+                },
+                "type": "LOCATED_IN",
+                "properties": {}
+            }
+        ],
+        "_fieldLookup": {
+            "god": 0,
+            "temple": 1,
+            "house": 2,
+            "district": 3,
+            "rel1": 4,
+            "rel2": 5,
+            "rel3": 6
+        }
+    },
+    {
+        "keys": [
+            "god",
+            "temple",
+            "house",
+            "district",
+            "rel1",
+            "rel2",
+            "rel3"
+        ],
+        "length": 7,
+        "_fields": [
+            {
+                "identity": {
+                    "low": 2077,
+                    "high": 0
+                },
+                "labels": [
+                    "god"
+                ],
+                "properties": {
+                    "name": "關聖帝君"
+                }
+            },
+            {
+                "identity": {
+                    "low": 1506,
+                    "high": 0
+                },
+                "labels": [
+                    "temple"
+                ],
+                "properties": {
+                    "principal": "王永昌",
+                    "templeId": "1764028",
+                    "city": "臺北市",
+                    "latitude": "25.0320205688477",
+                    "name": "財團法人台北市白雲禪寺",
+                    "tel": "02-27043214",
+                    "reg_type": "正式登記",
+                    "addr": "臺北市大安區義安里安和路2段20巷2號",
+                    "longitude": "121.552062988281",
+                    "religion": "佛教"
+                }
+            },
+            {
+                "identity": {
+                    "low": 2283,
+                    "high": 0
+                },
+                "labels": [
+                    "house"
+                ],
+                "properties": {
+                    "houseId": {
+                        "low": 68,
+                        "high": 0
+                    },
+                    "bed_room": "1",
+                    "city": "臺北市",
+                    "latitude": "25.03005",
+                    "price_parking": "0",
+                    "price_sqm": "266701",
+                    "constructed_date": "1996-12-27",
+                    "building_area": "24.85",
+                    "land_area": "7.13",
+                    "parking_type": "0",
+                    "balcony": "True",
+                    "toilet": "1",
+                    "living_room": "1",
+                    "management": "True",
+                    "district": "大安區",
+                    "parking_area": "0.0",
+                    "addr": "安和路二段８１號６樓之１",
+                    "age": "26",
+                    "price_total": "10300000",
+                    "building_type": "4",
+                    "longitude": "121.55219"
+                }
+            },
+            {
+                "identity": {
+                    "low": 31660,
+                    "high": 0
+                },
+                "labels": [
+                    "district"
+                ],
+                "properties": {
+                    "name": "大安區"
+                }
+            },
+            {
+                "identity": {
+                    "low": 1560,
+                    "high": 0
+                },
+                "start": {
+                    "low": 2077,
+                    "high": 0
+                },
+                "end": {
+                    "low": 1506,
+                    "high": 0
+                },
+                "type": "IN_CHARGE_OF",
+                "properties": {}
+            },
+            {
+                "identity": {
+                    "low": 7414,
+                    "high": 0
+                },
+                "start": {
+                    "low": 2283,
+                    "high": 0
+                },
+                "end": {
+                    "low": 1506,
+                    "high": 0
+                },
+                "type": "CLOSE_TO",
+                "properties": {
+                    "distance": 0.115933
+                }
+            },
+            {
+                "identity": {
+                    "low": 1613718,
+                    "high": 0
+                },
+                "start": {
+                    "low": 2283,
+                    "high": 0
+                },
+                "end": {
+                    "low": 31660,
+                    "high": 0
+                },
+                "type": "LOCATED_IN",
+                "properties": {}
+            }
+        ],
+        "_fieldLookup": {
+            "god": 0,
+            "temple": 1,
+            "house": 2,
+            "district": 3,
+            "rel1": 4,
+            "rel2": 5,
+            "rel3": 6
+        }
+    },
+    {
+        "keys": [
+            "god",
+            "temple",
+            "house",
+            "district",
+            "rel1",
+            "rel2",
+            "rel3"
+        ],
+        "length": 7,
+        "_fields": [
+            {
+                "identity": {
+                    "low": 2077,
+                    "high": 0
+                },
+                "labels": [
+                    "god"
+                ],
+                "properties": {
+                    "name": "關聖帝君"
+                }
+            },
+            {
+                "identity": {
+                    "low": 1506,
+                    "high": 0
+                },
+                "labels": [
+                    "temple"
+                ],
+                "properties": {
+                    "principal": "王永昌",
+                    "templeId": "1764028",
+                    "city": "臺北市",
+                    "latitude": "25.0320205688477",
+                    "name": "財團法人台北市白雲禪寺",
+                    "tel": "02-27043214",
+                    "reg_type": "正式登記",
+                    "addr": "臺北市大安區義安里安和路2段20巷2號",
+                    "longitude": "121.552062988281",
+                    "religion": "佛教"
+                }
+            },
+            {
+                "identity": {
+                    "low": 5330,
+                    "high": 0
+                },
+                "labels": [
+                    "house"
+                ],
+                "properties": {
+                    "houseId": {
+                        "low": 3115,
+                        "high": 0
+                    },
+                    "bed_room": "3",
+                    "city": "臺北市",
+                    "latitude": "25.02937",
+                    "price_parking": "0",
+                    "constructed_date": "1999-12-14",
+                    "price_sqm": "202925",
+                    "building_area": "97.13",
+                    "land_area": "45.74",
+                    "balcony": "True",
+                    "parking_type": "0",
+                    "toilet": "2",
+                    "living_room": "2",
+                    "management": "True",
+                    "district": "大安區",
+                    "parking_area": "0.0",
+                    "addr": "通安街118巷5號5樓",
+                    "age": "23",
+                    "price_total": "37600000",
+                    "building_type": "1",
+                    "longitude": "121.55254"
+                }
+            },
+            {
+                "identity": {
+                    "low": 31660,
+                    "high": 0
+                },
+                "labels": [
+                    "district"
+                ],
+                "properties": {
+                    "name": "大安區"
+                }
+            },
+            {
+                "identity": {
+                    "low": 1560,
+                    "high": 0
+                },
+                "start": {
+                    "low": 2077,
+                    "high": 0
+                },
+                "end": {
+                    "low": 1506,
+                    "high": 0
+                },
+                "type": "IN_CHARGE_OF",
+                "properties": {}
+            },
+            {
+                "identity": {
+                    "low": 251153,
+                    "high": 0
+                },
+                "start": {
+                    "low": 5330,
+                    "high": 0
+                },
+                "end": {
+                    "low": 1506,
+                    "high": 0
+                },
+                "type": "CLOSE_TO",
+                "properties": {
+                    "distance": 0.163641
+                }
+            },
+            {
+                "identity": {
+                    "low": 1616765,
+                    "high": 0
+                },
+                "start": {
+                    "low": 5330,
+                    "high": 0
+                },
+                "end": {
+                    "low": 31660,
+                    "high": 0
+                },
+                "type": "LOCATED_IN",
+                "properties": {}
+            }
+        ],
+        "_fieldLookup": {
+            "god": 0,
+            "temple": 1,
+            "house": 2,
+            "district": 3,
+            "rel1": 4,
+            "rel2": 5,
+            "rel3": 6
+        }
+    },
+    {
+        "keys": [
+            "god",
+            "temple",
+            "house",
+            "district",
+            "rel1",
+            "rel2",
+            "rel3"
+        ],
+        "length": 7,
+        "_fields": [
+            {
+                "identity": {
+                    "low": 2077,
+                    "high": 0
+                },
+                "labels": [
+                    "god"
+                ],
+                "properties": {
+                    "name": "關聖帝君"
+                }
+            },
+            {
+                "identity": {
+                    "low": 1506,
+                    "high": 0
+                },
+                "labels": [
+                    "temple"
+                ],
+                "properties": {
+                    "principal": "王永昌",
+                    "templeId": "1764028",
+                    "city": "臺北市",
+                    "latitude": "25.0320205688477",
+                    "name": "財團法人台北市白雲禪寺",
+                    "tel": "02-27043214",
+                    "reg_type": "正式登記",
+                    "addr": "臺北市大安區義安里安和路2段20巷2號",
+                    "longitude": "121.552062988281",
+                    "religion": "佛教"
+                }
+            },
+            {
+                "identity": {
+                    "low": 6153,
+                    "high": 0
+                },
+                "labels": [
+                    "house"
+                ],
+                "properties": {
+                    "houseId": {
+                        "low": 3938,
+                        "high": 0
+                    },
+                    "bed_room": "1",
+                    "city": "臺北市",
+                    "latitude": "25.03304",
+                    "price_parking": "0",
+                    "price_sqm": "239909",
+                    "constructed_date": "1971-03-01",
+                    "building_area": "26.26",
+                    "land_area": "3.79",
+                    "balcony": "False",
+                    "parking_type": "0",
+                    "toilet": "1",
+                    "living_room": "1",
+                    "management": "True",
+                    "district": "大安區",
+                    "parking_area": "0.0",
+                    "addr": "信義路四段６０之１５８號二樓",
+                    "age": "51",
+                    "price_total": "6300000",
+                    "building_type": "1",
+                    "longitude": "121.55048"
+                }
+            },
+            {
+                "identity": {
+                    "low": 31660,
+                    "high": 0
+                },
+                "labels": [
+                    "district"
+                ],
+                "properties": {
+                    "name": "大安區"
+                }
+            },
+            {
+                "identity": {
+                    "low": 1560,
+                    "high": 0
+                },
+                "start": {
+                    "low": 2077,
+                    "high": 0
+                },
+                "end": {
+                    "low": 1506,
+                    "high": 0
+                },
+                "type": "IN_CHARGE_OF",
+                "properties": {}
+            },
+            {
+                "identity": {
+                    "low": 313239,
+                    "high": 0
+                },
+                "start": {
+                    "low": 6153,
+                    "high": 0
+                },
+                "end": {
+                    "low": 1506,
+                    "high": 0
+                },
+                "type": "CLOSE_TO",
+                "properties": {
+                    "distance": 0.186099
+                }
+            },
+            {
+                "identity": {
+                    "low": 1617588,
+                    "high": 0
+                },
+                "start": {
+                    "low": 6153,
+                    "high": 0
+                },
+                "end": {
+                    "low": 31660,
+                    "high": 0
+                },
+                "type": "LOCATED_IN",
+                "properties": {}
+            }
+        ],
+        "_fieldLookup": {
+            "god": 0,
+            "temple": 1,
+            "house": 2,
+            "district": 3,
+            "rel1": 4,
+            "rel2": 5,
+            "rel3": 6
+        }
+    },
+    {
+        "keys": [
+            "god",
+            "temple",
+            "house",
+            "district",
+            "rel1",
+            "rel2",
+            "rel3"
+        ],
+        "length": 7,
+        "_fields": [
+            {
+                "identity": {
+                    "low": 2077,
+                    "high": 0
+                },
+                "labels": [
+                    "god"
+                ],
+                "properties": {
+                    "name": "關聖帝君"
+                }
+            },
+            {
+                "identity": {
+                    "low": 1506,
+                    "high": 0
+                },
+                "labels": [
+                    "temple"
+                ],
+                "properties": {
+                    "principal": "王永昌",
+                    "templeId": "1764028",
+                    "city": "臺北市",
+                    "latitude": "25.0320205688477",
+                    "name": "財團法人台北市白雲禪寺",
+                    "tel": "02-27043214",
+                    "reg_type": "正式登記",
+                    "addr": "臺北市大安區義安里安和路2段20巷2號",
+                    "longitude": "121.552062988281",
+                    "religion": "佛教"
+                }
+            },
+            {
+                "identity": {
+                    "low": 4165,
+                    "high": 0
+                },
+                "labels": [
+                    "house"
+                ],
+                "properties": {
+                    "houseId": {
+                        "low": 1950,
+                        "high": 0
+                    },
+                    "bed_room": "1",
+                    "city": "臺北市",
+                    "latitude": "25.03693",
+                    "price_parking": "2000000",
+                    "constructed_date": "2005-02-02",
+                    "price_sqm": "395594",
+                    "building_area": "28.15",
+                    "land_area": "7.23",
+                    "balcony": "True",
+                    "parking_type": "2",
+                    "toilet": "2",
+                    "living_room": "1",
+                    "management": "True",
+                    "district": "大安區",
+                    "parking_area": "3.49",
+                    "addr": "仁愛路四段２２２巷１１號六樓",
+                    "age": "17",
+                    "price_total": "18880000",
+                    "building_type": "1",
+                    "longitude": "121.55245"
+                }
+            },
+            {
+                "identity": {
+                    "low": 31660,
+                    "high": 0
+                },
+                "labels": [
+                    "district"
+                ],
+                "properties": {
+                    "name": "大安區"
+                }
+            },
+            {
+                "identity": {
+                    "low": 1560,
+                    "high": 0
+                },
+                "start": {
+                    "low": 2077,
+                    "high": 0
+                },
+                "end": {
+                    "low": 1506,
+                    "high": 0
+                },
+                "type": "IN_CHARGE_OF",
+                "properties": {}
+            },
+            {
+                "identity": {
+                    "low": 159397,
+                    "high": 0
+                },
+                "start": {
+                    "low": 4165,
+                    "high": 0
+                },
+                "end": {
+                    "low": 1506,
+                    "high": 0
+                },
+                "type": "CLOSE_TO",
+                "properties": {
+                    "distance": 0.289899
+                }
+            },
+            {
+                "identity": {
+                    "low": 1615600,
+                    "high": 0
+                },
+                "start": {
+                    "low": 4165,
+                    "high": 0
+                },
+                "end": {
+                    "low": 31660,
+                    "high": 0
+                },
+                "type": "LOCATED_IN",
+                "properties": {}
+            }
+        ],
+        "_fieldLookup": {
+            "god": 0,
+            "temple": 1,
+            "house": 2,
+            "district": 3,
+            "rel1": 4,
+            "rel2": 5,
+            "rel3": 6
+        }
+    },
+    {
+        "keys": [
+            "god",
+            "temple",
+            "house",
+            "district",
+            "rel1",
+            "rel2",
+            "rel3"
+        ],
+        "length": 7,
+        "_fields": [
+            {
+                "identity": {
+                    "low": 2077,
+                    "high": 0
+                },
+                "labels": [
+                    "god"
+                ],
+                "properties": {
+                    "name": "關聖帝君"
+                }
+            },
+            {
+                "identity": {
+                    "low": 1506,
+                    "high": 0
+                },
+                "labels": [
+                    "temple"
+                ],
+                "properties": {
+                    "principal": "王永昌",
+                    "templeId": "1764028",
+                    "city": "臺北市",
+                    "latitude": "25.0320205688477",
+                    "name": "財團法人台北市白雲禪寺",
+                    "tel": "02-27043214",
+                    "reg_type": "正式登記",
+                    "addr": "臺北市大安區義安里安和路2段20巷2號",
+                    "longitude": "121.552062988281",
+                    "religion": "佛教"
+                }
+            },
+            {
+                "identity": {
+                    "low": 3483,
+                    "high": 0
+                },
+                "labels": [
+                    "house"
+                ],
+                "properties": {
+                    "houseId": {
+                        "low": 1268,
+                        "high": 0
+                    },
+                    "bed_room": "4",
+                    "city": "臺北市",
+                    "latitude": "25.02877",
+                    "price_parking": "2500000",
+                    "constructed_date": "1989-08-10",
+                    "price_sqm": "290821",
+                    "land_area": "23.4",
+                    "building_area": "216.10000000000002",
+                    "balcony": "True",
+                    "parking_type": "2",
+                    "toilet": "2",
+                    "living_room": "2",
+                    "management": "True",
+                    "parking_area": "19.82",
+                    "district": "大安區",
+                    "addr": "安和路二段９２號９樓之１",
+                    "age": "33",
+                    "building_type": "0",
+                    "price_total": "68880000",
+                    "longitude": "121.55024"
+                }
+            },
+            {
+                "identity": {
+                    "low": 31660,
+                    "high": 0
+                },
+                "labels": [
+                    "district"
+                ],
+                "properties": {
+                    "name": "大安區"
+                }
+            },
+            {
+                "identity": {
+                    "low": 1560,
+                    "high": 0
+                },
+                "start": {
+                    "low": 2077,
+                    "high": 0
+                },
+                "end": {
+                    "low": 1506,
+                    "high": 0
+                },
+                "type": "IN_CHARGE_OF",
+                "properties": {}
+            },
+            {
+                "identity": {
+                    "low": 104001,
+                    "high": 0
+                },
+                "start": {
+                    "low": 3483,
+                    "high": 0
+                },
+                "end": {
+                    "low": 1506,
+                    "high": 0
+                },
+                "type": "CLOSE_TO",
+                "properties": {
+                    "distance": 0.277951
+                }
+            },
+            {
+                "identity": {
+                    "low": 1614918,
+                    "high": 0
+                },
+                "start": {
+                    "low": 3483,
+                    "high": 0
+                },
+                "end": {
+                    "low": 31660,
+                    "high": 0
+                },
+                "type": "LOCATED_IN",
+                "properties": {}
+            }
+        ],
+        "_fieldLookup": {
+            "god": 0,
+            "temple": 1,
+            "house": 2,
+            "district": 3,
+            "rel1": 4,
+            "rel2": 5,
+            "rel3": 6
+        }
+    },
+    {
+        "keys": [
+            "god",
+            "temple",
+            "house",
+            "district",
+            "rel1",
+            "rel2",
+            "rel3"
+        ],
+        "length": 7,
+        "_fields": [
+            {
+                "identity": {
+                    "low": 2077,
+                    "high": 0
+                },
+                "labels": [
+                    "god"
+                ],
+                "properties": {
+                    "name": "關聖帝君"
+                }
+            },
+            {
+                "identity": {
+                    "low": 1506,
+                    "high": 0
+                },
+                "labels": [
+                    "temple"
+                ],
+                "properties": {
+                    "principal": "王永昌",
+                    "templeId": "1764028",
+                    "city": "臺北市",
+                    "latitude": "25.0320205688477",
+                    "name": "財團法人台北市白雲禪寺",
+                    "tel": "02-27043214",
+                    "reg_type": "正式登記",
+                    "addr": "臺北市大安區義安里安和路2段20巷2號",
+                    "longitude": "121.552062988281",
+                    "religion": "佛教"
+                }
+            },
+            {
+                "identity": {
+                    "low": 4170,
+                    "high": 0
+                },
+                "labels": [
+                    "house"
+                ],
+                "properties": {
+                    "houseId": {
+                        "low": 1955,
+                        "high": 0
+                    },
+                    "bed_room": "3",
+                    "city": "臺北市",
+                    "latitude": "25.02905",
+                    "price_parking": "0",
+                    "constructed_date": "1982-04-03",
+                    "price_sqm": "165225",
+                    "building_area": "108.78",
+                    "land_area": "34.77",
+                    "balcony": "True",
+                    "parking_type": "0",
+                    "toilet": "2",
+                    "living_room": "2",
+                    "management": "False",
+                    "district": "大安區",
+                    "parking_area": "0.0",
+                    "addr": "通化街140巷5號4樓",
+                    "age": "40",
+                    "price_total": "19480000",
+                    "building_type": "2",
+                    "longitude": "121.55355"
+                }
+            },
+            {
+                "identity": {
+                    "low": 31660,
+                    "high": 0
+                },
+                "labels": [
+                    "district"
+                ],
+                "properties": {
+                    "name": "大安區"
+                }
+            },
+            {
+                "identity": {
+                    "low": 1560,
+                    "high": 0
+                },
+                "start": {
+                    "low": 2077,
+                    "high": 0
+                },
+                "end": {
+                    "low": 1506,
+                    "high": 0
+                },
+                "type": "IN_CHARGE_OF",
+                "properties": {}
+            },
+            {
+                "identity": {
+                    "low": 159859,
+                    "high": 0
+                },
+                "start": {
+                    "low": 4170,
+                    "high": 0
+                },
+                "end": {
+                    "low": 1506,
+                    "high": 0
+                },
+                "type": "CLOSE_TO",
+                "properties": {
+                    "distance": 0.23984
+                }
+            },
+            {
+                "identity": {
+                    "low": 1615605,
+                    "high": 0
+                },
+                "start": {
+                    "low": 4170,
+                    "high": 0
+                },
+                "end": {
+                    "low": 31660,
+                    "high": 0
+                },
+                "type": "LOCATED_IN",
+                "properties": {}
+            }
+        ],
+        "_fieldLookup": {
+            "god": 0,
+            "temple": 1,
+            "house": 2,
+            "district": 3,
+            "rel1": 4,
+            "rel2": 5,
+            "rel3": 6
+        }
+    },
+    {
+        "keys": [
+            "god",
+            "temple",
+            "house",
+            "district",
+            "rel1",
+            "rel2",
+            "rel3"
+        ],
+        "length": 7,
+        "_fields": [
+            {
+                "identity": {
+                    "low": 2077,
+                    "high": 0
+                },
+                "labels": [
+                    "god"
+                ],
+                "properties": {
+                    "name": "關聖帝君"
+                }
+            },
+            {
+                "identity": {
+                    "low": 1506,
+                    "high": 0
+                },
+                "labels": [
+                    "temple"
+                ],
+                "properties": {
+                    "principal": "王永昌",
+                    "templeId": "1764028",
+                    "city": "臺北市",
+                    "latitude": "25.0320205688477",
+                    "name": "財團法人台北市白雲禪寺",
+                    "tel": "02-27043214",
+                    "reg_type": "正式登記",
+                    "addr": "臺北市大安區義安里安和路2段20巷2號",
+                    "longitude": "121.552062988281",
+                    "religion": "佛教"
+                }
+            },
+            {
+                "identity": {
+                    "low": 4281,
+                    "high": 0
+                },
+                "labels": [
+                    "house"
+                ],
+                "properties": {
+                    "houseId": {
+                        "low": 2066,
+                        "high": 0
+                    },
+                    "bed_room": "3",
+                    "city": "臺北市",
+                    "latitude": "25.03416",
+                    "price_parking": "0",
+                    "price_sqm": "255062",
+                    "constructed_date": "1977-08-17",
+                    "building_area": "115.16999999999999",
+                    "land_area": "16.72",
+                    "balcony": "True",
+                    "parking_type": "0",
+                    "toilet": "2",
+                    "living_room": "1",
+                    "management": "True",
+                    "district": "大安區",
+                    "parking_area": "0.0",
+                    "addr": "安和路一段１０４號八樓之１",
+                    "age": "45",
+                    "price_total": "32500000",
+                    "building_type": "0",
+                    "longitude": "121.55232"
+                }
+            },
+            {
+                "identity": {
+                    "low": 31660,
+                    "high": 0
+                },
+                "labels": [
+                    "district"
+                ],
+                "properties": {
+                    "name": "大安區"
+                }
+            },
+            {
+                "identity": {
+                    "low": 1560,
+                    "high": 0
+                },
+                "start": {
+                    "low": 2077,
+                    "high": 0
+                },
+                "end": {
+                    "low": 1506,
+                    "high": 0
+                },
+                "type": "IN_CHARGE_OF",
+                "properties": {}
+            },
+            {
+                "identity": {
+                    "low": 169033,
+                    "high": 0
+                },
+                "start": {
+                    "low": 4281,
+                    "high": 0
+                },
+                "end": {
+                    "low": 1506,
+                    "high": 0
+                },
+                "type": "CLOSE_TO",
+                "properties": {
+                    "distance": 0.128165
+                }
+            },
+            {
+                "identity": {
+                    "low": 1615716,
+                    "high": 0
+                },
+                "start": {
+                    "low": 4281,
+                    "high": 0
+                },
+                "end": {
+                    "low": 31660,
+                    "high": 0
+                },
+                "type": "LOCATED_IN",
+                "properties": {}
+            }
+        ],
+        "_fieldLookup": {
+            "god": 0,
+            "temple": 1,
+            "house": 2,
+            "district": 3,
+            "rel1": 4,
+            "rel2": 5,
+            "rel3": 6
+        }
+    },
+    {
+        "keys": [
+            "god",
+            "temple",
+            "house",
+            "district",
+            "rel1",
+            "rel2",
+            "rel3"
+        ],
+        "length": 7,
+        "_fields": [
+            {
+                "identity": {
+                    "low": 2077,
+                    "high": 0
+                },
+                "labels": [
+                    "god"
+                ],
+                "properties": {
+                    "name": "關聖帝君"
+                }
+            },
+            {
+                "identity": {
+                    "low": 1506,
+                    "high": 0
+                },
+                "labels": [
+                    "temple"
+                ],
+                "properties": {
+                    "principal": "王永昌",
+                    "templeId": "1764028",
+                    "city": "臺北市",
+                    "latitude": "25.0320205688477",
+                    "name": "財團法人台北市白雲禪寺",
+                    "tel": "02-27043214",
+                    "reg_type": "正式登記",
+                    "addr": "臺北市大安區義安里安和路2段20巷2號",
+                    "longitude": "121.552062988281",
+                    "religion": "佛教"
+                }
+            },
+            {
+                "identity": {
+                    "low": 5298,
+                    "high": 0
+                },
+                "labels": [
+                    "house"
+                ],
+                "properties": {
+                    "houseId": {
+                        "low": 3083,
+                        "high": 0
+                    },
+                    "bed_room": "0",
+                    "city": "臺北市",
+                    "latitude": "25.03457",
+                    "price_parking": "0",
+                    "price_sqm": "217214",
+                    "constructed_date": "1982-12-04",
+                    "building_area": "124.71000000000001",
+                    "land_area": "30.67",
+                    "balcony": "True",
+                    "parking_type": "0",
+                    "toilet": "2",
+                    "living_room": "2",
+                    "management": "False",
+                    "parking_area": "0.0",
+                    "district": "大安區",
+                    "addr": "大安路一段１５７巷６號３樓",
+                    "age": "40",
+                    "building_type": "1",
+                    "price_total": "32000000",
+                    "longitude": "121.55294"
+                }
+            },
+            {
+                "identity": {
+                    "low": 31660,
+                    "high": 0
+                },
+                "labels": [
+                    "district"
+                ],
+                "properties": {
+                    "name": "大安區"
+                }
+            },
+            {
+                "identity": {
+                    "low": 1560,
+                    "high": 0
+                },
+                "start": {
+                    "low": 2077,
+                    "high": 0
+                },
+                "end": {
+                    "low": 1506,
+                    "high": 0
+                },
+                "type": "IN_CHARGE_OF",
+                "properties": {}
+            },
+            {
+                "identity": {
+                    "low": 248337,
+                    "high": 0
+                },
+                "start": {
+                    "low": 5298,
+                    "high": 0
+                },
+                "end": {
+                    "low": 1506,
+                    "high": 0
+                },
+                "type": "CLOSE_TO",
+                "properties": {
+                    "distance": 0.178059
+                }
+            },
+            {
+                "identity": {
+                    "low": 1616733,
+                    "high": 0
+                },
+                "start": {
+                    "low": 5298,
+                    "high": 0
+                },
+                "end": {
+                    "low": 31660,
+                    "high": 0
+                },
+                "type": "LOCATED_IN",
+                "properties": {}
+            }
+        ],
+        "_fieldLookup": {
+            "god": 0,
+            "temple": 1,
+            "house": 2,
+            "district": 3,
+            "rel1": 4,
+            "rel2": 5,
+            "rel3": 6
+        }
+    },
+    {
+        "keys": [
+            "god",
+            "temple",
+            "house",
+            "district",
+            "rel1",
+            "rel2",
+            "rel3"
+        ],
+        "length": 7,
+        "_fields": [
+            {
+                "identity": {
+                    "low": 2077,
+                    "high": 0
+                },
+                "labels": [
+                    "god"
+                ],
+                "properties": {
+                    "name": "關聖帝君"
+                }
+            },
+            {
+                "identity": {
+                    "low": 1506,
+                    "high": 0
+                },
+                "labels": [
+                    "temple"
+                ],
+                "properties": {
+                    "principal": "王永昌",
+                    "templeId": "1764028",
+                    "city": "臺北市",
+                    "latitude": "25.0320205688477",
+                    "name": "財團法人台北市白雲禪寺",
+                    "tel": "02-27043214",
+                    "reg_type": "正式登記",
+                    "addr": "臺北市大安區義安里安和路2段20巷2號",
+                    "longitude": "121.552062988281",
+                    "religion": "佛教"
+                }
+            },
+            {
+                "identity": {
+                    "low": 3039,
+                    "high": 0
+                },
+                "labels": [
+                    "house"
+                ],
+                "properties": {
+                    "houseId": {
+                        "low": 824,
+                        "high": 0
+                    },
+                    "bed_room": "3",
+                    "city": "臺北市",
+                    "latitude": "25.03291",
+                    "price_parking": "6000000",
+                    "constructed_date": "2017-12-28",
+                    "price_sqm": "337942",
+                    "building_area": "145.34",
+                    "land_area": "34.71",
+                    "balcony": "True",
+                    "parking_type": "1",
+                    "toilet": "2",
+                    "living_room": "2",
+                    "management": "True",
+                    "district": "大安區",
+                    "parking_area": "64.14",
+                    "addr": "大安路二段３巷５１號十樓",
+                    "age": "5",
+                    "price_total": "81280000",
+                    "building_type": "0",
+                    "longitude": "121.55263"
+                }
+            },
+            {
+                "identity": {
+                    "low": 31660,
+                    "high": 0
+                },
+                "labels": [
+                    "district"
+                ],
+                "properties": {
+                    "name": "大安區"
+                }
+            },
+            {
+                "identity": {
+                    "low": 1560,
+                    "high": 0
+                },
+                "start": {
+                    "low": 2077,
+                    "high": 0
+                },
+                "end": {
+                    "low": 1506,
+                    "high": 0
+                },
+                "type": "IN_CHARGE_OF",
+                "properties": {}
+            },
+            {
+                "identity": {
+                    "low": 68094,
+                    "high": 0
+                },
+                "start": {
+                    "low": 3039,
+                    "high": 0
+                },
+                "end": {
+                    "low": 1506,
+                    "high": 0
+                },
+                "type": "CLOSE_TO",
+                "properties": {
+                    "distance": 0.081769
+                }
+            },
+            {
+                "identity": {
+                    "low": 1614474,
+                    "high": 0
+                },
+                "start": {
+                    "low": 3039,
+                    "high": 0
+                },
+                "end": {
+                    "low": 31660,
+                    "high": 0
+                },
+                "type": "LOCATED_IN",
+                "properties": {}
+            }
+        ],
+        "_fieldLookup": {
+            "god": 0,
+            "temple": 1,
+            "house": 2,
+            "district": 3,
+            "rel1": 4,
+            "rel2": 5,
+            "rel3": 6
+        }
+    },
+    {
+        "keys": [
+            "god",
+            "temple",
+            "house",
+            "district",
+            "rel1",
+            "rel2",
+            "rel3"
+        ],
+        "length": 7,
+        "_fields": [
+            {
+                "identity": {
+                    "low": 2077,
+                    "high": 0
+                },
+                "labels": [
+                    "god"
+                ],
+                "properties": {
+                    "name": "關聖帝君"
+                }
+            },
+            {
+                "identity": {
+                    "low": 1506,
+                    "high": 0
+                },
+                "labels": [
+                    "temple"
+                ],
+                "properties": {
+                    "principal": "王永昌",
+                    "templeId": "1764028",
+                    "city": "臺北市",
+                    "latitude": "25.0320205688477",
+                    "name": "財團法人台北市白雲禪寺",
+                    "tel": "02-27043214",
+                    "reg_type": "正式登記",
+                    "addr": "臺北市大安區義安里安和路2段20巷2號",
+                    "longitude": "121.552062988281",
+                    "religion": "佛教"
+                }
+            },
+            {
+                "identity": {
+                    "low": 3775,
+                    "high": 0
+                },
+                "labels": [
+                    "house"
+                ],
+                "properties": {
+                    "houseId": {
+                        "low": 1560,
+                        "high": 0
+                    },
+                    "bed_room": "5",
+                    "city": "臺北市",
+                    "latitude": "25.0334",
+                    "price_parking": "0",
+                    "price_sqm": "295427",
+                    "constructed_date": "1982-11-25",
+                    "building_area": "213.23000000000002",
+                    "land_area": "25.29",
+                    "balcony": "True",
+                    "parking_type": "0",
+                    "toilet": "4",
+                    "living_room": "2",
+                    "management": "True",
+                    "district": "大安區",
+                    "parking_area": "0.0",
+                    "addr": "信義路四段２０７號２樓",
+                    "age": "40",
+                    "price_total": "77000000",
+                    "building_type": "0",
+                    "longitude": "121.55216"
+                }
+            },
+            {
+                "identity": {
+                    "low": 31660,
+                    "high": 0
+                },
+                "labels": [
+                    "district"
+                ],
+                "properties": {
+                    "name": "大安區"
+                }
+            },
+            {
+                "identity": {
+                    "low": 1560,
+                    "high": 0
+                },
+                "start": {
+                    "low": 2077,
+                    "high": 0
+                },
+                "end": {
+                    "low": 1506,
+                    "high": 0
+                },
+                "type": "IN_CHARGE_OF",
+                "properties": {}
+            },
+            {
+                "identity": {
+                    "low": 127112,
+                    "high": 0
+                },
+                "start": {
+                    "low": 3775,
+                    "high": 0
+                },
+                "end": {
+                    "low": 1506,
+                    "high": 0
+                },
+                "type": "CLOSE_TO",
+                "properties": {
+                    "distance": 0.08127
+                }
+            },
+            {
+                "identity": {
+                    "low": 1615210,
+                    "high": 0
+                },
+                "start": {
+                    "low": 3775,
+                    "high": 0
+                },
+                "end": {
+                    "low": 31660,
+                    "high": 0
+                },
+                "type": "LOCATED_IN",
+                "properties": {}
+            }
+        ],
+        "_fieldLookup": {
+            "god": 0,
+            "temple": 1,
+            "house": 2,
+            "district": 3,
+            "rel1": 4,
+            "rel2": 5,
+            "rel3": 6
+        }
+    },
+    {
+        "keys": [
+            "god",
+            "temple",
+            "house",
+            "district",
+            "rel1",
+            "rel2",
+            "rel3"
+        ],
+        "length": 7,
+        "_fields": [
+            {
+                "identity": {
+                    "low": 2077,
+                    "high": 0
+                },
+                "labels": [
+                    "god"
+                ],
+                "properties": {
+                    "name": "關聖帝君"
+                }
+            },
+            {
+                "identity": {
+                    "low": 1506,
+                    "high": 0
+                },
+                "labels": [
+                    "temple"
+                ],
+                "properties": {
+                    "principal": "王永昌",
+                    "templeId": "1764028",
+                    "city": "臺北市",
+                    "latitude": "25.0320205688477",
+                    "name": "財團法人台北市白雲禪寺",
+                    "tel": "02-27043214",
+                    "reg_type": "正式登記",
+                    "addr": "臺北市大安區義安里安和路2段20巷2號",
+                    "longitude": "121.552062988281",
+                    "religion": "佛教"
+                }
+            },
+            {
+                "identity": {
+                    "low": 6082,
+                    "high": 0
+                },
+                "labels": [
+                    "house"
+                ],
+                "properties": {
+                    "houseId": {
+                        "low": 3867,
+                        "high": 0
+                    },
+                    "bed_room": "1",
+                    "city": "臺北市",
+                    "latitude": "25.03038",
+                    "price_parking": "0",
+                    "price_sqm": "295618",
+                    "constructed_date": "2005-12-01",
+                    "building_area": "32.33",
+                    "land_area": "11.64",
+                    "parking_type": "0",
+                    "balcony": "True",
+                    "toilet": "1",
+                    "living_room": "1",
+                    "management": "True",
+                    "district": "大安區",
+                    "parking_area": "0.0",
+                    "addr": "安和路二段69巷18號2樓",
+                    "age": "17",
+                    "price_total": "13560000",
+                    "building_type": "4",
+                    "longitude": "121.5529"
+                }
+            },
+            {
+                "identity": {
+                    "low": 31660,
+                    "high": 0
+                },
+                "labels": [
+                    "district"
+                ],
+                "properties": {
+                    "name": "大安區"
+                }
+            },
+            {
+                "identity": {
+                    "low": 1560,
+                    "high": 0
+                },
+                "start": {
+                    "low": 2077,
+                    "high": 0
+                },
+                "end": {
+                    "low": 1506,
+                    "high": 0
+                },
+                "type": "IN_CHARGE_OF",
+                "properties": {}
+            },
+            {
+                "identity": {
+                    "low": 308314,
+                    "high": 0
+                },
+                "start": {
+                    "low": 6082,
+                    "high": 0
+                },
+                "end": {
+                    "low": 1506,
+                    "high": 0
+                },
+                "type": "CLOSE_TO",
+                "properties": {
+                    "distance": 0.133676
+                }
+            },
+            {
+                "identity": {
+                    "low": 1617517,
+                    "high": 0
+                },
+                "start": {
+                    "low": 6082,
+                    "high": 0
+                },
+                "end": {
+                    "low": 31660,
+                    "high": 0
+                },
+                "type": "LOCATED_IN",
+                "properties": {}
+            }
+        ],
+        "_fieldLookup": {
+            "god": 0,
+            "temple": 1,
+            "house": 2,
+            "district": 3,
+            "rel1": 4,
+            "rel2": 5,
+            "rel3": 6
+        }
+    },
+    {
+        "keys": [
+            "god",
+            "temple",
+            "house",
+            "district",
+            "rel1",
+            "rel2",
+            "rel3"
+        ],
+        "length": 7,
+        "_fields": [
+            {
+                "identity": {
+                    "low": 2077,
+                    "high": 0
+                },
+                "labels": [
+                    "god"
+                ],
+                "properties": {
+                    "name": "關聖帝君"
+                }
+            },
+            {
+                "identity": {
+                    "low": 1506,
+                    "high": 0
+                },
+                "labels": [
+                    "temple"
+                ],
+                "properties": {
+                    "principal": "王永昌",
+                    "templeId": "1764028",
+                    "city": "臺北市",
+                    "latitude": "25.0320205688477",
+                    "name": "財團法人台北市白雲禪寺",
+                    "tel": "02-27043214",
+                    "reg_type": "正式登記",
+                    "addr": "臺北市大安區義安里安和路2段20巷2號",
+                    "longitude": "121.552062988281",
+                    "religion": "佛教"
+                }
+            },
+            {
+                "identity": {
+                    "low": 5801,
+                    "high": 0
+                },
+                "labels": [
+                    "house"
+                ],
+                "properties": {
+                    "houseId": {
+                        "low": 3586,
+                        "high": 0
+                    },
+                    "bed_room": "3",
+                    "city": "臺北市",
+                    "latitude": "25.03262",
+                    "price_parking": "0",
+                    "constructed_date": "2012-05-03",
+                    "price_sqm": "285502",
+                    "building_area": "48.769999999999996",
+                    "land_area": "14.03",
+                    "balcony": "True",
+                    "parking_type": "6",
+                    "toilet": "1",
+                    "living_room": "2",
+                    "management": "True",
+                    "district": "大安區",
+                    "parking_area": "14.2",
+                    "addr": "通安街8號3樓",
+                    "age": "10",
+                    "price_total": "26880000",
+                    "building_type": "1",
+                    "longitude": "121.55325"
+                }
+            },
+            {
+                "identity": {
+                    "low": 31660,
+                    "high": 0
+                },
+                "labels": [
+                    "district"
+                ],
+                "properties": {
+                    "name": "大安區"
+                }
+            },
+            {
+                "identity": {
+                    "low": 1560,
+                    "high": 0
+                },
+                "start": {
+                    "low": 2077,
+                    "high": 0
+                },
+                "end": {
+                    "low": 1506,
+                    "high": 0
+                },
+                "type": "IN_CHARGE_OF",
+                "properties": {}
+            },
+            {
+                "identity": {
+                    "low": 286769,
+                    "high": 0
+                },
+                "start": {
+                    "low": 5801,
+                    "high": 0
+                },
+                "end": {
+                    "low": 1506,
+                    "high": 0
+                },
+                "type": "CLOSE_TO",
+                "properties": {
+                    "distance": 0.136771
+                }
+            },
+            {
+                "identity": {
+                    "low": 1617236,
+                    "high": 0
+                },
+                "start": {
+                    "low": 5801,
+                    "high": 0
+                },
+                "end": {
+                    "low": 31660,
+                    "high": 0
+                },
+                "type": "LOCATED_IN",
+                "properties": {}
+            }
+        ],
+        "_fieldLookup": {
+            "god": 0,
+            "temple": 1,
+            "house": 2,
+            "district": 3,
+            "rel1": 4,
+            "rel2": 5,
+            "rel3": 6
+        }
+    },
+    {
+        "keys": [
+            "god",
+            "temple",
+            "house",
+            "district",
+            "rel1",
+            "rel2",
+            "rel3"
+        ],
+        "length": 7,
+        "_fields": [
+            {
+                "identity": {
+                    "low": 2077,
+                    "high": 0
+                },
+                "labels": [
+                    "god"
+                ],
+                "properties": {
+                    "name": "關聖帝君"
+                }
+            },
+            {
+                "identity": {
+                    "low": 1506,
+                    "high": 0
+                },
+                "labels": [
+                    "temple"
+                ],
+                "properties": {
+                    "principal": "王永昌",
+                    "templeId": "1764028",
+                    "city": "臺北市",
+                    "latitude": "25.0320205688477",
+                    "name": "財團法人台北市白雲禪寺",
+                    "tel": "02-27043214",
+                    "reg_type": "正式登記",
+                    "addr": "臺北市大安區義安里安和路2段20巷2號",
+                    "longitude": "121.552062988281",
+                    "religion": "佛教"
+                }
+            },
+            {
+                "identity": {
+                    "low": 3069,
+                    "high": 0
+                },
+                "labels": [
+                    "house"
+                ],
+                "properties": {
+                    "houseId": {
+                        "low": 854,
+                        "high": 0
+                    },
+                    "bed_room": "1",
+                    "city": "臺北市",
+                    "latitude": "25.02783",
+                    "price_parking": "0",
+                    "constructed_date": "1983-03-12",
+                    "price_sqm": "259343",
+                    "building_area": "103.73",
+                    "land_area": "24.51",
+                    "parking_type": "0",
+                    "balcony": "False",
+                    "toilet": "1",
+                    "living_room": "2",
+                    "management": "True",
+                    "district": "大安區",
+                    "parking_area": "0.0",
+                    "addr": "通化街200巷31號",
+                    "age": "39",
+                    "price_total": "30880000",
+                    "building_type": "1",
+                    "longitude": "121.55189"
+                }
+            },
+            {
+                "identity": {
+                    "low": 31660,
+                    "high": 0
+                },
+                "labels": [
+                    "district"
+                ],
+                "properties": {
+                    "name": "大安區"
+                }
+            },
+            {
+                "identity": {
+                    "low": 1560,
+                    "high": 0
+                },
+                "start": {
+                    "low": 2077,
+                    "high": 0
+                },
+                "end": {
+                    "low": 1506,
+                    "high": 0
+                },
+                "type": "IN_CHARGE_OF",
+                "properties": {}
+            },
+            {
+                "identity": {
+                    "low": 70644,
+                    "high": 0
+                },
+                "start": {
+                    "low": 3069,
+                    "high": 0
+                },
+                "end": {
+                    "low": 1506,
+                    "high": 0
+                },
+                "type": "CLOSE_TO",
+                "properties": {
+                    "distance": 0.245455
+                }
+            },
+            {
+                "identity": {
+                    "low": 1614504,
+                    "high": 0
+                },
+                "start": {
+                    "low": 3069,
+                    "high": 0
+                },
+                "end": {
+                    "low": 31660,
+                    "high": 0
+                },
+                "type": "LOCATED_IN",
+                "properties": {}
+            }
+        ],
+        "_fieldLookup": {
+            "god": 0,
+            "temple": 1,
+            "house": 2,
+            "district": 3,
+            "rel1": 4,
+            "rel2": 5,
+            "rel3": 6
+        }
+    },
+    {
+        "keys": [
+            "god",
+            "temple",
+            "house",
+            "district",
+            "rel1",
+            "rel2",
+            "rel3"
+        ],
+        "length": 7,
+        "_fields": [
+            {
+                "identity": {
+                    "low": 2077,
+                    "high": 0
+                },
+                "labels": [
+                    "god"
+                ],
+                "properties": {
+                    "name": "關聖帝君"
+                }
+            },
+            {
+                "identity": {
+                    "low": 1506,
+                    "high": 0
+                },
+                "labels": [
+                    "temple"
+                ],
+                "properties": {
+                    "principal": "王永昌",
+                    "templeId": "1764028",
+                    "city": "臺北市",
+                    "latitude": "25.0320205688477",
+                    "name": "財團法人台北市白雲禪寺",
+                    "tel": "02-27043214",
+                    "reg_type": "正式登記",
+                    "addr": "臺北市大安區義安里安和路2段20巷2號",
+                    "longitude": "121.552062988281",
+                    "religion": "佛教"
+                }
+            },
+            {
+                "identity": {
+                    "low": 3623,
+                    "high": 0
+                },
+                "labels": [
+                    "house"
+                ],
+                "properties": {
+                    "houseId": {
+                        "low": 1408,
+                        "high": 0
+                    },
+                    "bed_room": "0",
+                    "city": "臺北市",
+                    "latitude": "25.03082",
+                    "price_parking": "0",
+                    "constructed_date": "1984-12-04",
+                    "price_sqm": "584934",
+                    "building_area": "40.220000000000006",
+                    "land_area": "8.96",
+                    "balcony": "False",
+                    "parking_type": "0",
+                    "toilet": "0",
+                    "living_room": "0",
+                    "management": "True",
+                    "district": "大安區",
+                    "parking_area": "0.0",
+                    "addr": "通化街３８巷１４號",
+                    "age": "38",
+                    "price_total": "27100000",
+                    "building_type": "5",
+                    "longitude": "121.55376"
+                }
+            },
+            {
+                "identity": {
+                    "low": 31660,
+                    "high": 0
+                },
+                "labels": [
+                    "district"
+                ],
+                "properties": {
+                    "name": "大安區"
+                }
+            },
+            {
+                "identity": {
+                    "low": 1560,
+                    "high": 0
+                },
+                "start": {
+                    "low": 2077,
+                    "high": 0
+                },
+                "end": {
+                    "low": 1506,
+                    "high": 0
+                },
+                "type": "IN_CHARGE_OF",
+                "properties": {}
+            },
+            {
+                "identity": {
+                    "low": 114967,
+                    "high": 0
+                },
+                "start": {
+                    "low": 3623,
+                    "high": 0
+                },
+                "end": {
+                    "low": 1506,
+                    "high": 0
+                },
+                "type": "CLOSE_TO",
+                "properties": {
+                    "distance": 0.201604
+                }
+            },
+            {
+                "identity": {
+                    "low": 1615058,
+                    "high": 0
+                },
+                "start": {
+                    "low": 3623,
+                    "high": 0
+                },
+                "end": {
+                    "low": 31660,
+                    "high": 0
+                },
+                "type": "LOCATED_IN",
+                "properties": {}
+            }
+        ],
+        "_fieldLookup": {
+            "god": 0,
+            "temple": 1,
+            "house": 2,
+            "district": 3,
+            "rel1": 4,
+            "rel2": 5,
+            "rel3": 6
+        }
+    },
+    {
+        "keys": [
+            "god",
+            "temple",
+            "house",
+            "district",
+            "rel1",
+            "rel2",
+            "rel3"
+        ],
+        "length": 7,
+        "_fields": [
+            {
+                "identity": {
+                    "low": 2077,
+                    "high": 0
+                },
+                "labels": [
+                    "god"
+                ],
+                "properties": {
+                    "name": "關聖帝君"
+                }
+            },
+            {
+                "identity": {
+                    "low": 1506,
+                    "high": 0
+                },
+                "labels": [
+                    "temple"
+                ],
+                "properties": {
+                    "principal": "王永昌",
+                    "templeId": "1764028",
+                    "city": "臺北市",
+                    "latitude": "25.0320205688477",
+                    "name": "財團法人台北市白雲禪寺",
+                    "tel": "02-27043214",
+                    "reg_type": "正式登記",
+                    "addr": "臺北市大安區義安里安和路2段20巷2號",
+                    "longitude": "121.552062988281",
+                    "religion": "佛教"
+                }
+            },
+            {
+                "identity": {
+                    "low": 6083,
+                    "high": 0
+                },
+                "labels": [
+                    "house"
+                ],
+                "properties": {
+                    "houseId": {
+                        "low": 3868,
+                        "high": 0
+                    },
+                    "bed_room": "5",
+                    "city": "臺北市",
+                    "latitude": "25.03187",
+                    "price_parking": "0",
+                    "constructed_date": "1985-12-30",
+                    "price_sqm": "198165",
+                    "building_area": "126.08",
+                    "land_area": "32.6",
+                    "balcony": "True",
+                    "parking_type": "0",
+                    "toilet": "2",
+                    "living_room": "1",
+                    "management": "True",
+                    "district": "大安區",
+                    "parking_area": "0.0",
+                    "addr": "安和路二段29號7樓",
+                    "age": "37",
+                    "price_total": "27000000",
+                    "building_type": "1",
+                    "longitude": "121.55261"
+                }
+            },
+            {
+                "identity": {
+                    "low": 31660,
+                    "high": 0
+                },
+                "labels": [
+                    "district"
+                ],
+                "properties": {
+                    "name": "大安區"
+                }
+            },
+            {
+                "identity": {
+                    "low": 1560,
+                    "high": 0
+                },
+                "start": {
+                    "low": 2077,
+                    "high": 0
+                },
+                "end": {
+                    "low": 1506,
+                    "high": 0
+                },
+                "type": "IN_CHARGE_OF",
+                "properties": {}
+            },
+            {
+                "identity": {
+                    "low": 308381,
+                    "high": 0
+                },
+                "start": {
+                    "low": 6083,
+                    "high": 0
+                },
+                "end": {
+                    "low": 1506,
+                    "high": 0
+                },
+                "type": "CLOSE_TO",
+                "properties": {
+                    "distance": 0.06156
+                }
+            },
+            {
+                "identity": {
+                    "low": 1617518,
+                    "high": 0
+                },
+                "start": {
+                    "low": 6083,
+                    "high": 0
+                },
+                "end": {
+                    "low": 31660,
+                    "high": 0
+                },
+                "type": "LOCATED_IN",
+                "properties": {}
+            }
+        ],
+        "_fieldLookup": {
+            "god": 0,
+            "temple": 1,
+            "house": 2,
+            "district": 3,
+            "rel1": 4,
+            "rel2": 5,
+            "rel3": 6
+        }
+    }
+]

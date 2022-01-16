@@ -1,6 +1,8 @@
-<nav class="navbar navbar-light fixed-top" style="background-color: #e3f2fd;">
+<nav class="navbar navbar-light fixed-top temple-banner">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
+    <a class="navbar-brand holy-text" href="#">
+      Holy Real Estate
+    </a>
     <ul class="nav nav-tabs">
       <li class="nav-item">
         <a class="nav-link active home" href="/">Home</a>
@@ -24,8 +26,8 @@
       id="offcanvasNavbar"
       aria-labelledby="offcanvasNavbarLabel"
     >
-      <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">條件查詢</h5>
+      <div class="offcanvas-header search-form-header">
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel" style="margin: auto;">條件查詢</h5>
         <button
           type="button"
           class="btn-close text-reset"
@@ -33,7 +35,7 @@
           aria-label="Close"
         ></button>
       </div>
-      <div class="offcanvas-body">
+      <div class="offcanvas-body holy-form">
         <%-include('query_form.ejs') %>
       </div>
     </div>
