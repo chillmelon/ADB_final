@@ -25,7 +25,7 @@ CREATE (g)-[r:IN_CHARGE_OF]->(t);
 
 
 LOAD CSV WITH HEADERS FROM 'file:///houses.csv' AS house_row
-CREATE (h:house {houseId: linenumber()-2,
+CREATE (h:house {houseId: toString(linenumber()-2),
                 city: house_row.city, 
                 district: house_row.district,
                 addr: house_row.address, 
@@ -56,33 +56,8 @@ MATCH
 WHERE
     d.name = h.district
 CREATE
-    (h)-[r:LOCATED_IN]->(d)
+    (h)-[r:LOCATED_IN]->(d);
 
 
 CREATE INDEX house_index FOR (h:house) ON (h.houseId);
 CREATE INDEX temple_index FOR (t:temple) ON (t.templeId);
-
-LOAD CSV WITH HEADERS FROM 'file:///close1.csv' AS close_row
-MATCH 
-    (h:house {houseId: toInteger(close_row.house_id)}),
-    (t:temple {templeId: close_row.temple_id})
-MERGE
-    (h)-[r:CLOSE_TO {distance: toFloat(close_row.distance)}]->(t);
-
-LOAD CSV WITH HEADERS FROM 'file:///close2.csv' AS close_row
-MATCH 
-    (h:house {houseId: toInteger(close_row.house_id)}),
-    (t:temple {templeId: close_row.temple_id})
-MERGE
-    (h)-[r:CLOSE_TO {distance: toFloat(close_row.distance)}]->(t);
-
-    
-
-LOAD CSV WITH HEADERS FROM 'file:///close3.csv' AS close_row
-MATCH 
-    (h:house {houseId: toInteger(close_row.house_id)}),
-    (t:temple {templeId: close_row.temple_id})
-MERGE
-    (h)-[r:CLOSE_TO {distance: toFloat(close_row.distance)}]->(t);
-
-    

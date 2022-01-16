@@ -14,7 +14,7 @@ services:
       - ./data/houses.csv:/data/houses.csv
       - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql
   db2:
-    image: neo4j:4.0.3
+    image: neo4j:4.4.3
     restart: always
     hostname: neo4j
     container_name: neo4j
@@ -22,19 +22,18 @@ services:
       - "7474:7474"
       - "7687:7687"
     volumes:
-      - ./neo4j/close1.csv:/var/lib/neo4j/import/close1.csv
-      - ./neo4j/close2.csv:/var/lib/neo4j/import/close2.csv
-      - ./neo4j/close3.csv:/var/lib/neo4j/import/close3.csv
+      - ./neo4j/close1.csv:/var/lib/neo4j/import/close_300.csv
       - ./neo4j/houses.csv:/var/lib/neo4j/import/houses.csv
       - ./neo4j/gods.csv:/var/lib/neo4j/import/gods.csv
       - ./neo4j/temple_unify.csv:/var/lib/neo4j/import/temple_unify.csv
       - ./neo4j/apoc.conf:/var/lib/neo4j/conf/apoc.conf
-      - ./neo4j/working_version.cypher:/var/lib/neo4j/import/working_version.cypher
+      - ./neo4j/init.cypher:/var/lib/neo4j/import/init.cypher
+      - ./neo4j/init2.cypher:/var/lib/neo4j/import/init2.cypher
     environment:
       - NEO4J_AUTH=neo4j/1234
-      - NEO4J_dbms_memory_pagecache_size=1G
-      - NEO4J_dbms.memory.heap.initial_size=1G
-      - NEO4J_dbms_memory_heap_max__size=1G
+      # - NEO4J_dbms_memory_pagecache_size=1G
+      # - NEO4J_dbms.memory.heap.initial_size=1G
+      # - NEO4J_dbms_memory_heap_max__size=1G
       - NEO4JLABS_PLUGINS=["apoc"]
 
   app:

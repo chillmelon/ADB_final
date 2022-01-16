@@ -1,6 +1,100 @@
-<svg width="1360" height="600"></svg>
+<div id='mainContainer'>
+  <svg width="1360" height="800"></svg>
+</div>
 <script>
-
+    function generate_tooltips(data){
+      let ret = ''
+      if (data.group == 1){
+        ret = `神明:${data.prop.name}`
+      }else if(data.group == 2){
+        ret = `宮廟:${data.prop.name}<br>負責人:${data.prop.principal}<br>住址:${data.prop.addr}<br>電話:${data.prop.tel}`
+      }else if(data.group == 3){
+        ret = `建物地址:${data.prop.addr}<br>總價:${data.prop.price_total}元<br>面積:${parseFloat(data.prop.building_area).toFixed(2)}平方公尺<br>屋齡:${data.prop.age}`
+      }else if(data.group == 4){
+        ret = `行政區:${data.prop.name}`
+      }
+      return ret
+    }
+    function convert2d3(graph){
+      let convTab = {
+        'g':1,
+        't':2,
+        'h':3,
+        'd':4
+      }
+      let ret = {links:[],nodes:[]}
+      let idx = 0
+      let temple_tab = {}
+      let god_tab = {}
+      let house_tab = {}
+      let district_tab = {}
+      let relation_idx = 0
+      graph.forEach(item=>{
+        let tmp_idx = []
+        item._fields.forEach(subitem=>{
+          if ('labels' in subitem){
+            let data = {}
+            let group = convTab[subitem['labels'][0].slice(0,1)]
+            data.group = group
+            data.index = idx
+            if (group == 1 ){
+              if (!(subitem.properties.name in god_tab)){
+                god_tab[subitem.properties.name] = idx
+                data.id = subitem.properties.name
+                data.prop = subitem.properties
+              }else{
+                tmp_idx.push(god_tab[subitem.properties.name])
+              }
+            }else if(group == 2 ){
+              if (!(subitem.properties.name in temple_tab)){
+                temple_tab[subitem.properties.name] = idx
+                data.id = subitem.properties.name
+                data.prop = subitem.properties
+              }else{
+                tmp_idx.push(temple_tab[subitem.properties.name])
+              }
+            }else if (group == 3 ){
+              if (!(subitem.properties.addr in house_tab)){
+                house_tab[subitem.properties.addr] = idx
+                data.id = subitem.properties.addr
+                data.prop = subitem.properties
+              }else{
+                tmp_idx.push(house_tab[subitem.properties.addr])
+              }
+            }else if (group == 4 ){
+              if(!(subitem.properties.name in district_tab)){
+                district_tab[subitem.properties.name] = idx
+                data.id = subitem.properties.name
+                data.prop = subitem.properties
+              }else{
+                tmp_idx.push(district_tab[subitem.properties.name])
+              }
+            }
+            if ('id' in data){
+              ret.nodes.push(data)
+              tmp_idx.push(idx)
+              idx+=1
+            }
+          }
+        })
+        console.log(tmp_idx)
+        //generate relation
+        let tmp = tmp_idx[2]
+        tmp_idx[2] = tmp_idx[3]
+        tmp_idx[3] = tmp
+        for (let i=0;i<tmp_idx.length-1;i++){
+          console.log(ret.nodes[tmp_idx[i]].id)
+          let data = {}
+          data.idx = relation_idx+=1
+          data.source = ret.nodes[tmp_idx[i]]
+          data.target = ret.nodes[tmp_idx[i+1]]
+          data.value = 1
+          ret.links.push(data)
+        }
+      })
+      return ret
+    }
+    
     var svg = d3.select("svg"),
         width = +svg.attr("width"),
         height = +svg.attr("height");
@@ -12,16 +106,18 @@
         .force("charge", d3.forceManyBody())
         .force("center", d3.forceCenter(width / 2, height / 2));
     
-    d3.json("/test/miserables.json", function(error, graph) {
-      if (error) throw error;
-        console.log(graph)
+    axios.post(
+      "/api/territory/graph",
+      { god_name: '福德正神', districts: ['新莊區', '林口區', '五股區', '泰山區', '中正區'] }
+    ).then((result) => {
+      console.log(result);
+      graph = convert2d3(result.data)
       var link = svg.append("g")
           .attr("class", "links")
         .selectAll("line")
         .data(graph.links)
         .enter().append("line")
           .attr("stroke-width", function(d) { return Math.sqrt(d.value); });
-    
       var node = svg.append("g")
           .attr("class", "nodes")
         .selectAll("circle")
@@ -36,7 +132,24 @@
     
       node.append("title")
           .text(function(d) { return d.id; });
-    
+      const tooltip = d3.select('#mainContainer').append("div")
+          .classed("tooltip", true)
+          .style("opacity", 0) // start invisible
+      node
+        .on("mouseover", function(d) {
+          tooltip.transition()
+            .duration(300)
+            .style("opacity", 1) // show the tooltip
+          tooltip.html(generate_tooltips(d))
+            .style("left", (d3.event.pageX - d3.select('.tooltip').node().offsetWidth - 5) + "px")
+            .style("top", (d3.event.pageY - d3.select('.tooltip').node().offsetHeight) + "px");
+        })
+        .on("mouseleave", function(d) {
+        tooltip.transition()
+          .duration(200)
+          .style("opacity", 0)
+        })
+
       simulation
           .nodes(graph.nodes)
           .on("tick", ticked);
@@ -55,7 +168,7 @@
             .attr("cx", function(d) { return d.x; })
             .attr("cy", function(d) { return d.y; });
       }
-    });
+  });
     
     function dragstarted(d) {
       if (!d3.event.active) simulation.alphaTarget(0.3).restart();
