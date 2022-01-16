@@ -24,7 +24,6 @@ const Temple = {
 			];
 
 			let result = await db.query(sql, values);
-			console.log(result);
 			return result.rows;
 		} catch (error) {
 			console.error(error);

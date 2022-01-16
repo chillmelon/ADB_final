@@ -63,7 +63,7 @@ const House = {
 					+ "OR god_0 = $1" + " "
 					+ "OR god_1 = $1" + " "
 					+ "OR god_2 = $1) sub" + " "
-				+ "ON st_dwithin(h.geog, sub.geog, 100)"
+				+ "ON st_dwithin(h.geog, sub.geog, 500)"
 				+ "WHERE ($2::text is null OR h.city = $2)"
 				+ "AND" + "($3::text is null OR h.district = $3)"
 				+ "AND" + "($4::int is null OR h.bed_room = $4)"
