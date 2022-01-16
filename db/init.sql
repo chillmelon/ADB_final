@@ -32,7 +32,7 @@ CREATE TABLE temples (
 	addr text,
 	religion text,
 	tel text,
-	pricipal text,
+	principal text,
 	longitude double precision,
 	latitude double precision,
 	dist text
