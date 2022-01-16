@@ -171,7 +171,19 @@
     </div>
   </div>
 </form>
+<style>
+  /* css to customize Leaflet default styles  */
 
+  .custom-popup .leaflet-popup-tip-container {
+  width:30px;
+  height:15px;
+  }
+  .custom-popup .leaflet-popup-tip {
+  border-left:15px solid transparent;
+  border-right:15px solid transparent;
+  border-top:15px solid #537435;
+  }
+  </style>
 
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script>
@@ -325,9 +337,22 @@
       });
 
       result.data.temples?.forEach(item=>{
-        var marker = L.marker([item.latitude, item.longitude])
+        var customPopup = `地址:${item.dist}${item.addr}<br>聯絡人:${item.principal}<br>名稱:${item.name}<br>宗教:${item.religion}`
+        var customOptions =
+          {
+          'maxWidth': '400',
+          'width': '200',
+          'className' : 'custom-popup',
+          }
+        var icon = L.icon({
+        iconUrl: '/img/yuanbao.png',
+        iconSize: [50,50], // size of the icon
+        popupAnchor: [0,-15]
+        });
+
+        var marker = L.marker([item.latitude, item.longitude],{icon: icon})
           .addTo(map)
-          .bindPopup(`地址:${item.dist}${item.addr}<br>聯絡人:${item.principal}<br>名稱:${item.name}<br>宗教:${item.religion}`)
+          .bindPopup(customPopup,customOptions)
           .openPopup();
         markerList.push(marker)
       });
