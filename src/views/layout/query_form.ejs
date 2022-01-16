@@ -167,7 +167,10 @@
 
 
     <div class="col-12">
-      <button type="submit" id="search_button" class="btn btn-primary submit-button">Submit</button>
+      <a class="col-12" href="">
+        <img style="margin:auto;" src="/img/god_query.gif" alt="Submit" id="god-query">
+      </a>
+      <!-- <button type="submit" id="search_button" class="btn btn-primary submit-button">Submit</button> -->
     </div>
   </div>
 </form>
@@ -231,7 +234,7 @@
 
   // post query
   var markerList = []
-  $("form").submit(function () {
+  $("#god-query").click(function () {
 		event.preventDefault();
 		event.stopPropagation();
     markerList.forEach(item=>{
