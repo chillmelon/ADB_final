@@ -314,14 +314,24 @@
       "/api/house",
       data
     ).then((result) => {
+      console.log(result.data.temples);
 
-      result.data.forEach(item=>{
+      result.data.houses.forEach(item=>{
         var marker = L.marker([item.latitude, item.longitude])
           .addTo(map)
           .bindPopup(`地址:${item.district}${item.address}<br>屋齡:${item.age}年<br>面積:${item.building_area.toFixed(2)}平方公尺<br>總價:${item.price_total}元`)
           .openPopup();
         markerList.push(marker)
-      })
+      });
+
+      result.data.temples?.forEach(item=>{
+        var marker = L.marker([item.latitude, item.longitude])
+          .addTo(map)
+          .bindPopup(`地址:${item.dist}${item.addr}<br>聯絡人:${item.principal}<br>名稱:${item.name}<br>宗教:${item.religion}`)
+          .openPopup();
+        markerList.push(marker)
+      });
+
     });
   });
 

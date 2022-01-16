@@ -37,9 +37,11 @@ module.exports = function () {
 		}
 
 		let houses = [];
+		let temples = [];
 
 		if (data.god) {
 			houses = await House.get_by_god(data);
+			temples = await Temple.get_by_god(data.god);
 		} else {
 			houses = await House.get(data);
 		}
@@ -52,7 +54,11 @@ module.exports = function () {
 			return res.status(404).send("house not found.");
 		}
 
-		return res.status(200).json(houses);
+		result = {
+			"houses": houses,
+			"temples": temples
+		};
+		return res.status(200).json(result);
 	})
 
 	return router;

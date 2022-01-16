@@ -10,10 +10,13 @@ const Temple = {
 			return undefined;
 		}
 	},
-	async find_all() {
+	async get_by_god(god) {
 		try {
-			let sql = "SELECT * FROM temples;";
-			let result = await db.query(sql)
+			let sql = "SELECT * from temples"
+				+ " " + "WHERE god_0 = $1"
+				+ " " + "OR god_1 = $1"
+				+ " " + "OR god_2 = $1;";
+			let result = await db.query(sql, [god]);
 			console.log(result);
 			return result.rows;
 		} catch (error) {
